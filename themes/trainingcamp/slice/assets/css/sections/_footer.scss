@@ -1,0 +1,237 @@
+.footer_ {
+  background: $color-white;
+  border-top: 1px solid $color-light-gray;
+  color: $color-dark-sky;
+  font: 10px/16px 'oswaldregular', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  .container {
+    padding: 35px 20px;
+    &.small {
+      padding: 40px 10px;
+    }
+  }
+
+  form {
+    p {
+      font: 10px/10px 'inconsolataregular', sans-serif;
+      color: $color-dark-gray;
+    }
+    strong {
+      font-family: 'inconsolatabold', sans-serif;
+    }
+  }
+  .form-row {
+    margin-bottom: 0;
+  }
+  .large-input {
+    button[type="submit"] {
+      background: url('#{$path-svg}/arrow-gray.svg') no-repeat center center / contain;
+      text-indent: -9999px;
+    }
+  }
+
+  .footer-wrap {
+    background: #f8fcff;
+
+    .container:first-child {
+      border-bottom: 1px solid $color-light-sky;
+      padding-bottom: 0;
+    }
+  }
+  .footer-nav {
+    width: 100%;
+    padding-bottom: 15px;
+    li {
+      margin-bottom: 9px;
+    }
+  }
+  .footer-menu {
+    margin-bottom: 30px;
+    a {
+      display: inline-block;
+      position: relative;
+      margin: 10px 0 8px;
+      font: 16px/26px 'oswaldregular', sans-serif;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: $color-black;
+    }
+  }
+  .sub-menu {
+    a {
+      margin: 0;
+      color: $color-dark-sky;
+      font: 10px/16px 'oswaldregular', sans-serif;
+      letter-spacing: 2px;
+    }
+  }
+  .column {
+    margin: 0 auto 18px;
+    padding: 0 25px;
+    max-width: 290px;
+  }
+
+  .copy {
+    color: $color-sky;
+    text-align: center;
+    p + p {
+      margin-top: 10px;
+    }
+    a {
+      color: $color-dark-sky;
+    }
+  }
+  .social-links {
+    text-align: center;
+  }
+}
+
+@include tab {
+  .footer_ {
+    .container.small {
+      padding: 40px 20px;
+    }
+    .footer-nav {
+      @include flex(row, center, $fw: wrap);
+      width: 100%;
+      ul {
+        margin-bottom: 0;
+      }
+    }
+    .footer-menu {
+      @include inlined();
+      > li {
+        display: inline-block;
+        vertical-align: top;
+        width: 33%;
+        padding-right: 15px;
+      }
+    }
+    .social-links {
+      margin-top: 10px;
+    }
+  }
+}
+
+@include lap {
+  .footer_ {
+    font-size: 12px;
+    line-height: 26px;
+    .container {
+      padding: 100px 0;
+      &.small {
+        padding: 60px 0;
+        max-width: 870px;
+      }
+    }
+    form {
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 3px;
+      }
+    }
+    .footer-nav {
+      overflow: hidden;
+      padding-bottom: 67px;
+      li {
+        margin-bottom: 4px;
+      }
+    }
+    .footer-menu {
+      width: calc(100% - 160px);
+      float: left;
+      a {
+        margin-top: 15px;
+        font-size: 18px;
+        line-height: 26px;
+        letter-spacing: 5px;
+      }
+    }
+    .sub-menu a {
+      font-size: 12px;
+      line-height: 28px;
+      margin: 0 0 5px;
+      letter-spacing: 2px;
+    }
+    .column {
+      margin: 0;
+      width: auto;
+      max-width: 25%;
+    }
+    .btn {
+      min-width: 240px;
+    }
+    .social-links {
+      overflow: hidden;
+      margin-top: 15px;
+    }
+    .copy {
+      p + p {
+        margin-top: 3px;
+      }
+    }
+  }
+  .form-row.large-input {
+    input[type="text"] {
+      padding-bottom: 28px;
+    }
+  }
+}
+
+@include desk {
+  .footer_ {
+    .container {
+      padding: 100px 0;
+    }
+    .footer-nav {
+      padding-bottom: 90px;
+    }
+    .footer-menu a {
+      margin: 20px 0 11px;
+    }
+    .sub-menu a {
+      margin: 0;
+    }
+    .social-links {
+      margin-top: 18px;
+    }
+  }
+}
+
+.no-dev {
+  .footer_ {
+    .footer-menu {
+      a {
+        &:after {
+          content: "";
+          @include pos(absolute, $bottom: 0, $left: center);
+          width: 0;
+          height: 1px;
+          background-color: $color-black;
+          transition: width .3s ease;
+        }
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .sub-menu a {
+      transition: color .3s ease;
+      &:after {
+        display: none;
+      }
+      &:hover {
+        color: $color-black;
+      }
+    }
+    .footer-nav {
+      position: relative;
+      display: inline-block;
+    }
+  }
+}

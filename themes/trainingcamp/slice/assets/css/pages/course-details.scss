@@ -1,0 +1,367 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+@import "../sections/slick";
+@import "../sections/slick-theme";
+@import "../sections/aside-filter";
+@import "../sections/jquery-ui";
+@import "../sections/app";
+@import "../sections/pricing-schedules-section";
+@import "../sections/course-previews";
+@import "../sections/pagination";
+.top-bg {
+  .content-block {
+    p {
+      margin-bottom: 30px;
+    }
+  }
+  figure {
+    display: block;
+    width: 65px;
+    height: 40px;
+    margin: 0 auto;
+    @include bg(center, center, contain);
+  }
+}
+.columns {
+  .col {
+    p {
+      margin-bottom: 10px;
+    }
+    a {
+      display: block;
+      margin-bottom: 20px;
+      font: 10px/18px 'oswaldmedium', sans-serif;
+      text-transform: uppercase;
+    }
+  }
+}
+.course-info {
+  padding: 40px 0;
+  background-color: $color-blue;
+  color: $color-white;
+  text-align: center;
+  li:not(:last-child) {
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    &:after {
+      content: "";
+      @include pos(absolute, $bottom: 0, $left: center);
+      width: 80%;
+      height: 1px;
+      background: linear-gradient(to right, $color-transparent 0%, $color-white 50%, $color-transparent 100%);
+    }
+  }
+  h6 {
+    font-family: 'oswaldregular', sans-serif;
+  }
+}
+.course-additions {
+  padding: 40px 0 20px;
+  text-align: center;
+  li {
+    margin-bottom: 30px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .btn {
+    min-width: 180px;
+  }
+}
+.training-features {
+  margin-bottom: 40px;
+  padding-top: 20px;
+  text-align: center;
+  border-top: 1px solid $color-light-gray;
+  li {
+    position: relative;
+    padding: 10px;
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-light-gray;
+    }
+  }
+}
+.certificate {
+  margin-bottom: 40px;
+  background-color: $color-white-snow;
+  figure {
+    display: block;
+    width: 225px;
+    height: 140px;
+    margin: 0 auto 30px;
+    @include bg(center, center, contain);
+  }
+}
+.quote-slider {
+  padding-top: 40px;
+  border-top: 1px solid $color-light-gray;
+  blockquote {
+    q,
+    p {
+      margin-bottom: 20px;
+      font: 16px/26px 'oswalddemibold', sans-serif;
+      letter-spacing: 2px;
+    }
+    footer {
+      margin-bottom: 20px;
+      font: 16px/20px 'inconsolatabold', sans-serif;
+    }
+    .info {
+      width: 100%;
+      float: none;
+    }
+  }
+}
+.buttons {
+  .btn {
+    margin-bottom: 20px;
+  }
+}
+.icon-list + .buttons {
+  margin-bottom: 40px;
+}
+@media screen and(min-width: 540px) {
+  .training-features {
+    ul {
+      @include flex($fw: wrap);
+    }
+    li {
+      width: 50%;
+      &:nth-child(2) {
+        border-bottom: none;
+      }
+      &:nth-child(even) {
+        border-left: 1px solid $color-light-gray;
+      }
+    }
+  }
+}
+@include tab {
+  .course-additions {
+    li {
+      display: inline-block;
+      width: 48%;
+      vertical-align: top;
+    }
+  }
+  .training-features {
+    margin-bottom: 60px;
+    padding-top: 60px;
+    ul {
+      position: relative;
+      @include flex(row, center, $fw: wrap);
+    }
+    li {
+      width: 33%;
+      flex-shrink: 0;
+      padding: 10px 20px;
+      &:first-child,
+      &:last-child {
+        &:after {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-color: $color-white;
+          z-index: 1;
+        }
+      }
+      &:first-child {
+        position: relative;
+        &:after {
+          right: -10px;
+          bottom: -10px;
+        }
+      }
+      &:last-child {
+        position: relative;
+        &:after {
+          top: -10px;
+          left: -10px;
+        }
+      }
+      &:nth-child(odd) {
+        border-left: 1px solid $color-light-gray;
+      }
+      &:nth-child(3n + 1) {
+        border-left: none;
+      }
+      &:nth-last-child(3),
+      &:nth-last-child(2) {
+        border-bottom: none;
+      }
+      &:nth-child(2) {
+        border-bottom: 1px solid $color-light-gray;
+      }
+    }
+  }
+  .certificate {
+     margin-bottom: 60px;
+  }
+}
+@include xtab {
+  .course-info {
+    padding: 46px 0;
+    ul {
+      @include flex(row, space-between, center, row);
+    }
+  }
+  .course-additions {
+    ul {
+      text-align: justify;
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+    }
+    li {
+      display: inline-block;
+      text-align: center;
+      width: 22%;
+    }
+  }
+  .course-info {
+    li {
+      width: 18%;
+      text-align: left;
+      &:not(:last-child) {
+        margin: 0;
+        padding: 0;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .certificate {
+    .container {
+      @include flex();
+    }
+    figure {
+      flex-shrink: 0;
+      margin: 0 40px 0 0;
+    }
+  }
+}
+@include lap {
+  .course-info {
+    margin-bottom: 100px;
+    h5,
+    h6 {
+      letter-spacing: 3px;
+    }
+  }
+  .course-additions {
+    li {
+      margin-bottom: 0;
+    }
+    h3 {
+      line-height: 28px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .tab-wrap {
+    padding-bottom: 80px;
+  }
+  .columns {
+    margin-bottom: 80px;
+    .col {
+      p {
+        margin-bottom: 30px;
+      }
+      a {
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 28px;
+      }
+    }
+  }
+  .training-features {
+    margin-bottom: 80px;
+    padding-top: 80px;
+    .title {
+      margin-bottom: 120px;
+    }
+    li {
+      padding: 40px;
+    }
+  }
+  .certificate {
+    margin-bottom: 80px;
+    figure {
+      margin-right: 85px;
+    }
+  }
+  .quote-slider {
+    padding-top: 80px;
+    blockquote {
+      q {
+        letter-spacing: 4px;
+        font-size: 18px;
+        line-height: 32px;
+        margin-bottom: 16px;
+      }
+      cite {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 2px;
+      }
+      footer {
+        margin-bottom: 80px;
+      }
+    }
+  }
+  .icon-list {
+    h3 {
+      line-height: 28px;
+    }
+    + .buttons {
+      margin-bottom: 60px;
+    }
+  }
+  .previews-list {
+    margin-bottom: 52px;
+  }
+}
+@include desk {
+  .top-bg {
+    .content-block {
+      padding-top: 145px;
+      padding-bottom: 0;
+    }
+  }
+  .tab-nav {
+    margin-bottom: 95px;
+  }
+  .col {
+    h2 {
+      margin-bottom: 15px;
+    }
+  }
+  .training-features {
+    margin-bottom: 110px;
+    h3 {
+      line-height: 28px;
+    }
+    li {
+      padding: 40px 80px;
+    }
+  }
+  .certificate {
+    margin-bottom: 130px;
+  }
+  .quote-slider {
+    .title {
+      margin-bottom: 84px;
+    }
+  }
+  .icon-list + .buttons {
+    margin-bottom: 120px;
+  }
+}

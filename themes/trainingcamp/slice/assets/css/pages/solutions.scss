@@ -1,0 +1,50 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+
+
+.icon-list.horizontal {
+  li {
+    border-bottom: 1px solid $color-light-gray;
+    padding-bottom: 30px;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+@include lap {
+  .icon-list.horizontal {
+    li {
+      padding-bottom: 40px;
+      &:nth-last-child(2) {
+        &:not(:nth-child(even)) {
+          border-bottom: 0;
+        }
+      }
+    }
+    .info {
+      @include flex(column, space-between, flex-start);
+      width: 100%;
+      height: 100%;
+      p {
+        flex-grow: 1;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@include desk {
+  .icon-list.horizontal {
+    li {
+      margin-bottom: 55px;
+      padding-bottom: 60px;
+      &:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

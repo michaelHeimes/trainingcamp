@@ -1,0 +1,316 @@
+
+
+/* ---- ANIMATION ------------------------------------------------------------------------ */
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+html {
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+    height: 100%;
+    animation: fadein 2s;
+    cursor: default;
+}
+
+.animated {
+    opacity: 0;
+}
+
+.animated.delay-quarter {
+    -webkit-animation-delay: .25s;
+    -moz-animation-delay: .25s;
+    animation-delay: .25s;
+}
+
+.animated.delay-half {
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.animated.delay-1 {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.animated.delay-1half {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+.animated.delay-2 {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.animated.delay-3 {
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    animation-delay: 3s;
+}
+
+.animated.delay-4 {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+.animated.delay-5 {
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.animated.delay-6 {
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    animation-delay: 6s;
+}
+
+.animated.delay-7 {
+    -webkit-animation-delay: 7s;
+    -moz-animation-delay: 7s;
+    animation-delay: 7s;
+}
+
+.animated.delay-8 {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    animation-delay: 8s;
+}
+
+.animated.delay-9 {
+    -webkit-animation-delay: 9s;
+    -moz-animation-delay: 9s;
+    animation-delay: 9s;
+}
+
+
+/* ---- UTILITY ------------------------------------------------------------------------ */
+
+.bg-primary {
+    background-color: #2e4689;
+}
+
+.bg-secondary {
+    background-color: #333333;
+}
+
+.bg-grey {
+    background-color: #6d6e71;
+}
+
+.bg-light {
+    background-color: #eeeeee;
+}
+
+.bg-image {
+    background: transparent top right no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: contain;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.text-grey {
+    color: #6d6e71 !important;
+}
+
+.text-light {
+    color: #cccccc !important;
+}
+
+.text-accent {
+    color: #2e4689 !important;
+}
+
+.text-secondary {
+    color: #333333 !important;
+}
+
+.text-reverse {
+    color: #ffffff;
+}
+
+.grey {
+    background-color: #6d6e71;
+}
+
+.accent {
+    background-color: #2e4689;
+}
+
+.secondary {
+    background-color: #333333;
+}
+
+.reverse {
+    background-color: #ffffff;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.border-grey {
+    border-color: #6d6e71;
+}
+
+.border-accent {
+    border-color: #2e4689;
+}
+
+.border-secondary {
+    border-color: #333333;
+}
+
+.border-reverse {
+    border-color: #ffffff;
+}
+
+.padding-top-1\/2 {
+    padding-top: .5rem;
+}
+
+.padding-right-1\/2 {
+    padding-right: .5rem;
+}
+
+.padding-bottom-1\/2 {
+    padding-bottom: .5rem;
+}
+
+.padding-left-1\/2 {
+    padding-left: .5rem;
+}
+
+.padding-top-4 {
+    padding-top: 4rem;
+}
+
+.padding-right-4 {
+    padding-right: 4rem;
+}
+
+.padding-bottom-4 {
+    padding-bottom: 4rem;
+}
+
+.padding-left-4 {
+    padding-left: 4rem;
+}
+
+
+/* ---- ACCORDION SLIDER ------------------------------------------------------------------------ */
+
+$defaultSeconds: 3s;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container {
+    height: 15em;
+    width: 100%;
+    display: -webkit-flex;
+    /* Safari */
+    display: flex;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.flex-title {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    position: relative;
+    font-size: 1.8em;
+    line-height: 1.2em;
+    margin: auto 1em auto 1em;
+    text-align: center;
+    top: 45%;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.flex-about {
+    opacity: 0;
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    width: 70%;
+    font-size: 1.2em;
+    top: 30%;
+    line-height: 1.2;
+    margin: auto;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.flex-slide {
+    -webkit-flex: 1;
+    /* Safari 6.1+ */
+    -ms-flex: 1;
+    /* IE 10 */
+    flex: 1;
+    text-decoration: none !important;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.flex-slide:hover {
+    -webkit-flex-grow: 3;
+    flex-grow: 3;
+}
+
+.flex-border {
+    border-right: 6px solid #FFF;
+    border-left: 6px solid #FFF;
+}
+
+.flex-bg-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(sol_corp.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.flex-bg-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(sol_gov.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.flex-bg-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(sol_mil.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+

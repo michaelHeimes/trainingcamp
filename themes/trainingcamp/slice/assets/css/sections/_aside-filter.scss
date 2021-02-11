@@ -1,0 +1,105 @@
+aside {
+  border: {
+    top: 2px solid $color-dark-gray;
+    bottom: 2px solid $color-dark-gray;
+  }
+  margin: 0 auto 30px;
+  padding: 20px 0 0;
+  max-width: 280px;
+}
+.filter {
+  h5 {
+    margin-bottom: 10px;
+  }
+  ul {
+    display: block;
+    margin-bottom: 5px;
+    transition: height .7s ease-in;
+    overflow: hidden;
+  }
+  li {
+    display: block;
+    width: 100% !important;
+  }
+  .form-wrap {
+    margin: 0 0 20px;
+  }
+  .form-row {
+    margin: 0 0 5px;
+  }
+  label {
+    display: block !important;
+    @include dots();
+  }
+  .dropped {
+    height: 90px;
+    & + .buttons {
+      margin: 0;
+    }
+  }
+}
+.filter-btn {
+  display: inline-block;
+  width: auto;
+  text-transform: uppercase;
+  color: $color-blue;
+  font: 15px/26px 'oswaldregular', sans-serif;
+  text-align: left;
+  cursor: pointer;
+  letter-spacing: 3px;
+}
+.show-more {
+  margin-bottom: 15px;
+}
+.group-training {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: $color-white-snow;
+  p {
+    padding: 15px 0 20px;
+    color: $color-dark-sky;
+  }
+  .btn {
+    min-width: 100%;
+  }
+}
+.date-picker + .buttons {
+  margin-bottom: 10px;
+}
+@include lap {
+  aside {
+    border-bottom: none;
+    float: left;
+    margin-bottom: 50px;
+    padding-top: 40px;
+  }
+  .filter {
+    h5 {
+      margin-bottom: 15px;
+      letter-spacing: 3px;
+    }
+    .form-wrap {
+      margin-bottom: 25px;
+    }
+    .form-row {
+      margin-bottom: 15px;
+    }
+    .dropped {
+      height: 120px;
+    }
+  }
+  .group-training {
+    padding: 40px 30px;
+  }
+}
+
+@include desk {
+  aside {
+    padding-top: 65px;
+  }
+}
+.no-dev {
+  .filter-btn:hover {
+    text-decoration: underline;
+  }
+}

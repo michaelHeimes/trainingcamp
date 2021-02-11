@@ -1,0 +1,20 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+@import "../sections/bread-crumbs";
+@import "../sections/shop-table";
+
+.page-wrap {
+  padding-top: 50px;
+}
+@include lap {
+  .page-wrap {
+    padding-top: 180px;
+  }
+}
+@include desk {
+  .page-wrap {
+    padding-top: 270px;
+  }
+}

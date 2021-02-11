@@ -1,0 +1,80 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+
+.page-wrap {
+  padding-top: 50px;
+}
+.section {
+  padding-top: 80px;
+}
+
+.jobs-list {
+  margin-bottom: 30px;
+  text-align: center;
+  li {
+    border-bottom: 1px solid $color-light-gray;
+    padding: 20px 0;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.buttons {
+  text-align: center;
+}
+
+@include xxxmob {
+  .jobs-list {
+    text-align: left;
+    li {
+      @include flex(row, space-between, center);
+    }
+    h3 {
+      flex-basis: 50%;
+    }
+    p {
+      flex-basis: 29%;
+      margin-bottom: 0;
+      padding: 0 15px;
+    }
+  }
+}
+
+@include tab {
+  .section {
+    padding-top: 100px;
+  }
+}
+
+@include lap {
+  .page-wrap {
+    padding-top: 180px;
+  }
+  .section {
+    padding-top: 120px;
+  }
+}
+
+@include desk {
+  .page-wrap {
+    padding-top: 270px;
+  }
+  .section {
+    padding-top: 150px;
+    .container {
+      max-width: 1080px;
+    }
+  }
+  .jobs-list {
+    margin-bottom: 60px;
+    li {
+      padding: 40px 0;
+    }
+    p {
+      padding: 0 30px;
+    }
+  }
+}

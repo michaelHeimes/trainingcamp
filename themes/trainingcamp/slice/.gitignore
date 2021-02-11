@@ -1,0 +1,11 @@
+.log
+.logs
+.idea
+.DS_Store
+node_modules
+bower_components
+**/.DS_Store
+logs
+log
+yarn*
+

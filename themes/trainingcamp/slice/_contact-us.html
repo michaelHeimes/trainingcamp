@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" class="no-dev">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+				content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="shortcut icon" href="dist/images/apple-icon.png"
+				type="image/x-icon">
+	<link rel="icon" href="dist/images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="dist/images/apple-icon.png"/>
+	<meta content="telephone=no" name="format-detection">
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="dist/css/contact-us.css"/>
+</head>
+<body>
+
+<main class="wrapper">
+
+	//= templates/header
+	//= templates/search-panel
+
+	<div class="page-wrap">
+		<div class="section">
+			<div class="container">
+				<div class="title">
+					<h2>Contact us</h2>
+				</div>
+				<div class="forms clearfix">
+					<div class="send-message">
+						<form action="#" method="post">
+							<h3>send us a message</h3>
+							<div class="form-wrap">
+								<p class="form-row form-row-first">
+									<span class="wpcf7-form-control-wrap your-name">
+										<input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control wpcf7-not-valid" id="your-name" aria-required="true" aria-invalid="true" placeholder="Your name*">
+										<label for="your-name">Your name*</label>
+										<span role="alert" class="wpcf7-not-valid-tip">The field is required.</span>
+									</span>
+								</p>
+								<p class="form-row form-row-last">
+									<input type="email" id="email-address" class="form-control" placeholder="Email address*" required>
+									<label for="email-address">Email address*</label>
+								</p>
+								<p class="form-row form-row-first">
+									<input type="text" id="phone" class="form-control" placeholder="Phone">
+									<label for="phone">Phone</label>
+								</p>
+								<p class="form-row form-row-last">
+									<input type="text" id="company" class="form-control" placeholder="Company">
+									<label for="company">Company</label>
+								</p>
+								<p class="form-row form-row-wide">
+									<textarea id="message" class="form-control" placeholder="Message*" required></textarea>
+									<label for="message">Message*</label>
+								</p>
+							</div>
+							<div class="buttons">
+								<input type="submit" class="btn btn-blue" value="Send your message">
+							</div>
+						</form>
+					</div>
+					<div class="contact-info">
+						<h3>Contact info</h3>
+						<h5>Phone</h5>
+						<p>800.698.5501</p>
+
+						<h5>Email</h5>
+						<p>info@trainingcamp.com</p>
+
+						<h5>address</h5>
+						<address>
+							<span>6 Interplex Drive</span>
+							<span>Trevose, Pennsylvania 19053</span>
+							<span>USA</span>
+						</address>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!--PAGE END-->
+
+	//= templates/footer
+
+</main><!-- WRAPPER END -->
+<div class="popups"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="dist/js/global.js"></script>
+</body>
+</html>

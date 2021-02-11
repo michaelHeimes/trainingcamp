@@ -1,0 +1,433 @@
+/*
+Theme Name: Child Theme
+Theme URI: http://underscores.me/
+Description: Description.
+Author: Iyyanarappan
+Author URI: http://underscores.me/
+Template: trainingcamp
+Version: 0.1
+*/
+
+@font-face {font-family:"Open Sans";src:url("fonts/OpenSans-Regular.eot?") format("eot"),url("fonts/OpenSans-Regular.woff") format("woff"),url("fonts/OpenSans-Regular.ttf") format("truetype"),url("fonts/OpenSans-Regular.svg#OpenSans") format("svg");font-weight:normal;font-style:normal;}
+@import url("../trainingcamp/style.css");
+
+@media screen and (min-width: 1280px){
+.header_ .main-nav a {
+    font: 15px/21px oswaldmedium,sans-serif !important;
+}
+.header_.sticky .main-nav {
+    padding-left: 400px !important;
+    }
+.header_ .main-nav li {
+    margin: 0px 10px !important;
+}
+}
+*
+{
+letter-spacing: 0.0625em !important;
+
+}
+
+.form-row .form-control {
+    color: #25313a !important;
+    border-bottom: 1px solid rgba(128, 134, 138, 0.5) !important;
+}
+
+* p{
+font-family: Open Sans !important;
+}
+.footer-wrap{
+background-color: #323232 !important;
+}
+
+.jcf-select{
+box-shadow: 0 2px 10px rgba(2,2,2,.10) !important;
+}
+
+.as-seen-on img{
+opacity: 0.5 !important;
+}
+
+.copy , .copy > p > a{
+color: white !important;
+}
+
+.form-row .form-control, .form-row .form-control+label {
+    font: 16px/16px inconsolataregular,sans-serif !important;
+}
+
+
+.dropdown a{
+color: #00274c !important;
+}
+
+.dropdown{
+color: #00274c !important;
+}
+
+.social-links path{
+fill: #ffffff !important;
+}
+
+.no-dev .social-links a:hover path{
+fill:#0184ff !important;
+}
+
+.social-links a{
+width: 34px !important;
+height: 34px !important;
+}
+
+.social-links path{
+fill:white;
+}
+
+@media screen and (min-width: 1280px){
+.social-links li {
+margin-right: 5px !important;
+}
+}
+.social-links svg{
+    width: 28px !important;
+    height: 28px !important;
+}
+
+.footer-menu > li > a {
+color: white !important;
+    font-family: oswaldBold !important;
+}
+
+.sub-menu > li > a{
+color: white !important;
+    font-family: Open Sans !important;
+}
+
+ @media screen and (max-width: 767px) {
+      .page-heading.featured {
+        background-image: none; } 
+.top-bg{
+    min-height: 0 !important;
+}}
+ @media screen and (min-width: 768px) {
+      .page-heading.featured {
+        min-height: 200px;
+        background-repeat: no-repeat;
+  /*      background-size: auto 370px ;*/
+        background-position: 0 50%; } }
+ @media screen and (min-width: 1024px) {
+      .page-heading.featured {
+        min-height: 370px;
+        background-size: cover; }}
+
+.custom-content-block{
+height: auto !important;
+}
+.custom-title:before{
+    width: 0px !important;
+}
+
+.custom-tab-nav{
+width: 100%;
+    text-align: -webkit-center;
+    display: table;
+}
+.custom-ul{
+list-style: none;
+    width: 75%;
+}
+
+@media screen and (min-width: 1280px){
+.custom-testimonial-slide{
+      font-size: 32px !important;
+        line-height: 24px !important;
+}
+.custom-tab-nav li {
+    width: 33% !important;
+    margin: 0;
+}
+
+.results-num{
+padding-left: 25px;
+}
+}
+.custom-ul li.active {
+    color: #fff !important;
+    border-color: transparent !important;
+    background: #3c3c3c !important;
+}
+
+.custom-ul li {
+    color: #3c3c3c !important;
+    border-color: #3c3c3c !important;
+    background: #fff !important;
+}
+
+@media screen and (min-width: 1280px){
+.custom-title {
+padding-top:0px !important;
+}
+}
+
+@media screen and (min-width: 768px) {
+      .page-heading.featured-course {
+        min-height: 200px;
+        background-repeat: no-repeat;
+  /*      background-size: auto 370px ;*/
+        background-position: 0 50%; } }
+ @media screen and (min-width: 1024px) {
+      .page-heading.featured-course {
+        min-height: 370px;
+        background-size: cover; }}
+
+/*.wp-pagenavi span.current{
+color: #000000 !important;
+    font-size: 25px !important;
+    font-weight: bold !important;
+}
+
+.wp-pagenavi a, .wp-pagenavi button, .wp-pagenavi span{
+    font-size: 20px !important;
+    font-weight: bold !important;
+color: #666666 !important;
+}
+*/
+
+.wp-pagenavi {
+	padding: 10px 20px 10px !important;
+	display:block !important;
+	clear:both !important;
+}
+.wp-pagenavi a ,.wp-pagenavi span.pages, .wp-pagenavi span.extend {
+		color:#707070 !important;
+		background:#FFFFFF !important;
+		border-radius:3px !important;	
+		-moz-border-radius:3px !important;
+		-webkit-border-radius:3px !important;
+		border:solid 1px #DCDCDC !important;
+		padding:6px 9px 6px 9px !important;
+		margin-right:3px !important;
+		text-decoration:none !important;
+
+    font-size: 20px !important;
+    color: black !important;
+}
+/*
+.wp-pagenavi a:hover {
+		border-color:#202020 !important;
+		background:#525252 !important;
+		color:#fff !important;
+		background:-moz-linear-gradient(top,#9F9F9F 1px,#6C6C6C 1px,#525252) !important;
+		background:-webkit-gradient(linear,0 0,0 100%,color-stop(0.02,#9F9F9F),color-stop(0.02,#6C6C6C),color-stop(1,#525252)) !important;
+
+}
+*/
+ .wp-pagenavi span.current{
+		padding:6px 9px 6px 9px !important;
+		border:solid 1px #DCDCDC !important;
+		border-color:#3390CA !important;
+		border-radius:3px !important;	
+		-moz-border-radius:3px !important;
+		-webkit-border-radius:3px !important;
+		color:#fff !important;
+		margin-right:3px !important;
+		border-color:#202020 !important;
+    font-size: 25px;
+		background:#525252 !important;
+		background:-moz-linear-gradient(top,#9F9F9F 1px,#6C6C6C 1px,#525252) !important;
+		background:-webkit-gradient(linear,0 0,0 100%,color-stop(0.02,#9F9F9F),color-stop(0.02,#6C6C6C),color-stop(1,#525252)) !important;
+}
+
+.wp-pagenavi .nextpostslink, .wp-pagenavi .previouspostslink{
+border:none !important;
+}
+
+.arrow-left:before, .arrow-right:before, .nextpostslink:before, .previouspostslink:before {
+    top: calc(50% - 0px) !important;
+    width: 25px !important;
+    height: 2px !important;
+    background-color: #000 !important;
+}
+
+.arrow-left:after, .arrow-right:after, .nextpostslink:after, .previouspostslink:after {
+    top: calc(50% - 5px) !important;
+    width: 10px !important;
+    height: 10px !important;
+    transform: rotate(-45deg);
+    border: solid #000 !important;
+    border-width: 2px 0 0 2px !important;
+}
+
+.arrow-left:before, .arrow-right:before, .nextpostslink:before, .previouspostslink:before, .slick-next:before, .slick-prev:before{
+ top: calc(50% - 0px) !important;
+    width: 25px !important;
+    height: 2px !important;
+    background-color: #000 !important;
+}
+
+.arrow-left:after, .arrow-right:after, .nextpostslink:after, .previouspostslink:after, .slick-next:after, .slick-prev:after{
+top: calc(50% - 5px) !important;
+    width: 10px !important;
+    height: 10px !important;
+    transform: rotate(-45deg);
+    border: solid #000 !important;
+    border-width: 2px 0 0 2px !important;
+}
+
+.form-row.large-input button[type=submit]{
+background: url(../trainingcamp/slice/svg/arrow.svg) center center/contain no-repeat !important;
+}
+
+.form-row.large-input {
+    border-bottom: 1px solid #808080 !important;
+}
+
+.form-row.large-input input[type=text]::placeholder {
+  color: #808080 !important;
+}
+.form-row.large-input input[type=text] {
+  color: #808080 !important;
+}
+
+.title:before{
+display:none;
+}
+
+.title {
+     padding-top: 0px !important;
+}
+
+
+blockquote span {
+    color: #808080 !important;
+}
+
+.quote-slider .slide-num{
+    color: #000 !important;
+}
+
+.quote-slider .cur-slide:after{
+
+   color: #000 !important;
+}
+
+.why-choose h6 {
+    color: #46657a !important;
+}
+
+
+
+#course_description{
+display:none;
+}
+
+.custom-course-additions{
+    border-top: 1px solid #e8ecee;
+}
+@media screen and (min-width: 1280px)
+{
+
+.training-features {
+    margin-bottom: 40px !important;
+    padding-top: 40px !important;
+}
+.training-features .title {
+    margin-bottom: 40px !important;
+}
+.custom-course-info{
+    margin-bottom: 50px !important;
+}
+
+.custom-columns{
+margin-bottom: 0px !important;
+}
+
+  .custom-columns .col-first
+    {
+
+        width: calc(75% - 43px) !important;
+        margin: 0 43px 0 0;
+    }
+
+  .custom-columns .col-second
+    {
+        width: calc(25% - 43px) !important;
+        margin: 0 43px 0 0 !important;
+    }
+}
+
+.custom-buttons{
+padding: 0px !important;
+}
+
+.custom-columns{
+margin-top: 30px !important;
+}
+
+.custom-descr{
+    line-height: 1.3;
+    vertical-align: text-top;
+    font-weight: 300;
+    margin: 0 0 0.75em;
+}
+
+.custom-product-item{
+    max-width: 400px;
+    box-shadow: 0 0 30px rgba(2,2,2,.19) !important;
+    height: 270px !important;
+}
+
+.custom-course-heading{
+
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 0.75em;
+    white-space: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000;
+    font-size: 1.625rem;
+}
+
+
+.custom-professional-dev{
+    box-sizing: border-box;
+    padding: 40px 43px;
+    color: #000;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 400px;
+    display: block;
+    min-width: 270px;
+    height: 100%;
+    margin-bottom: 15px;
+    padding: 40px;
+}
+
+.rollover{
+text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 8.9em;
+    text-align: justify;
+    margin-right: -1em;
+}
+
+.custom-title{
+display:none;
+}
+
+.results-num{
+    font-size: 1.3em;
+}
+
+.custom-testimonial-slide{
+    font-size: 24px;
+    line-height: 24px;
+}
+
+.custom-related-course{
+    overflow: hidden;
+    max-height: 6em;
+min-height: 6em;
+}
+

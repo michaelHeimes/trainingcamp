@@ -1,0 +1,31 @@
+{
+  "name": "octoKIT",
+  "version": "1.0.5",
+  "main": "index.js",
+  "repository": "git@github.com:Slimmind/octo-kit.git",
+  "author": "BigDropInc",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.17.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-changed": "*",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-concat": "^2.4.3",
+    "gulp-csscomb": "^3.0.3",
+    "gulp-ignore": "^2.0.2",
+    "gulp-imagemin": "^2.1.0",
+    "gulp-jscs": "^1.4.0",
+    "gulp-jshint": "^1.9.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^2.3.2",
+    "imagemin-pngcrush": "^4.0.0",
+    "jshint-stylish": "^1.0.0"
+  },
+  "devDependencies": {
+    "gulp-cssmin": "^0.1.6",
+    "gulp-uglify": "^1.1.0",
+    "gulp-ignore": "^2.0.2"
+  }
+}

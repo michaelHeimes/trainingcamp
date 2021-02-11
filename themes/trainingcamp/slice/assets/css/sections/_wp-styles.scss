@@ -1,0 +1,131 @@
+// Default WP Styles
+
+.content {
+  .buttons {
+    padding: 20px 0;
+  }
+  p, li {
+    a {
+      color: $color-blue;
+      transition: color .3s ease;
+      &:hover {
+      }
+    }
+  }
+  p {
+    margin-bottom: 10px;
+
+  }
+  ul,
+  ol {
+    list-style: none;
+    margin-bottom: 15px;
+    ul,
+    ol {
+      padding: 5px 0 0 20px;
+    }
+  }
+  ul {
+    li {
+      padding-left: 15px;
+      position: relative;
+      &:before {
+        @include pos(absolute, 0, 0);
+        content: '\2022';
+        color: $color-blue;
+        font-size: inherit;
+        line-height: inherit;
+        font-family: 'inconsolatabold', sans-serif;
+      }
+    }
+  }
+  ol {
+    counter-reset: section;
+    li {
+      &:before {
+        content: counter(section) '.';
+        counter-increment: section;
+        color: $color-blue;
+        display: inline-block;
+        font-family: 'inconsolatabold', sans-serif;
+        margin-right: 10px;
+      }
+    }
+  }
+  img {
+    height: auto;
+    width: 100%;
+    &.alignright {
+      float: right;
+      margin: 0 0 1em 1em;
+    }
+    &.alignleft {
+      float: left;
+      margin: 0 1em 1em 0;
+    }
+    &.aligncenter {
+      display: block;
+      margin: 0 auto 1em;
+    }
+  }
+  .alignright {
+    float: right;
+  }
+  .alignleft {
+    float: left;
+  }
+  .aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  iframe {
+    display: block;
+    margin: 0 auto 1em;
+    width: 100%;
+  }
+}
+
+@include tab {
+  .content {
+    img,
+    iframe {
+      width: 50%;
+    }
+  }
+}
+
+@include lap {
+  .content {
+    font-size: 16px;
+    line-height: 26px;
+    ul,
+    ol {
+      margin-bottom: 20px;
+      ul,
+      ol {
+        padding: 10px 0 0 20px;
+      }
+    }
+  }
+}
+
+@include desk {
+  .content {
+    img,
+    iframe {
+      width: 33.33%;
+    }
+  }
+}
+.no-dev {
+  .content {
+    li, p {
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

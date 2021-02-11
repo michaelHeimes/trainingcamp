@@ -1,0 +1,49 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+
+.instructors {
+  @include inlined(12px, 17px, 1px);
+  margin: 0 -20px;
+  text-align: center;
+  li {
+    margin-bottom: 30px;
+    padding: 0 20px;
+    vertical-align: top;
+    width: 320px;
+  }
+  figure {
+    @include bg(50%, 50%, cover);
+    height: 350px;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  h5 {
+    color: $color-dark-sky;
+    letter-spacing: 3px;
+  }
+}
+
+@include lap {
+  .instructors {
+    li {
+      width: 25%;
+    }
+    h5 {
+      font-size: 14px;
+    }
+  }
+}
+
+@include desk {
+  .instructors {
+    li {
+      margin-bottom: 35px;
+    }
+    figure {
+      height: 500px;
+      margin-bottom: 25px;
+    }
+  }
+}

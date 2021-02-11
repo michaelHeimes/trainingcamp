@@ -1,0 +1,49 @@
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en"> <![endif]-->
+<html lang="en" class="no-dev">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="dist/css/global.css"/>
+	<title>Menu</title>
+	<style>
+		body {
+			background: url('bg.png');
+		}
+
+		ul {
+			width: 100%;
+			max-width: 480px;
+			margin: 30px auto;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+		}
+
+		li {
+			display: block;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+
+
+<div class="wrapper">
+	<ul class="list-unstyled " id="menu"></ul>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+  $(function () {
+    $.ajax('pages.json').done(function (data) {
+      $.each(data, function (a, b) {
+        var el = $('<li><a href="' + b + '.html" class="btn btn-blue">' + b + '</a></li>');
+        $('#menu').append(el);
+      })
+    })
+
+  })
+</script>
+</body>
+</html>

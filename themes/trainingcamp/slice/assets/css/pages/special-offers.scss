@@ -1,0 +1,183 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+@import "../sections/slick";
+@import "../sections/slick-theme";
+@import "../sections/course-previews";
+
+.top-bg {
+  .content-block {
+    padding: 60px 40px;
+  }
+  
+  &.top-slider {
+    .slide {
+      position: relative;
+      @include bg(50%, 50%, cover);
+      display: table;
+      height: 80vh;
+      &:before {
+        content: "";
+        @include pos(absolute,0,0,0,0);
+        background-color: rgba($color-black, .4);
+      }
+    }
+    .arrow-left,
+    .arrow-right {
+      &:before {
+        display: none;
+      }
+      &:after {
+        top: calc(50% - 8px);
+        width: 16px;
+        height: 16px;
+        border: 3px solid $color-transparent;
+        border-top-color: $color-white;
+        border-left-color: $color-white;
+      }
+    }
+    .slick-dots {
+      @include pos(absolute, $left: center, $bottom: 10px);
+      li {
+        cursor: pointer;
+        display: inline-block;
+        height: 20px;
+        margin: 0 3px;
+        padding: 5px;
+        width: 20px;
+        button {
+          background: $color-transparent;
+          border: 1px solid $color-white;
+          border-radius: 50%;
+          display: block;
+          height: 100%;
+          overflow: hidden;
+          padding: 0;
+          text-indent: -9999px;
+          transition: background .3s ease;
+          width: 100%;
+        }
+        
+        &:hover,
+        &.slick-active {
+          button {
+            background: $color-white;
+          }
+        }
+      }
+    }
+  }
+}
+
+h2 {
+  span {
+    font-family: 'oswaldlight', sans-serif;
+  }
+}
+
+.courses-list {
+  margin-bottom: 30px;
+  > li {
+    padding: 20px 0 0;
+  }
+  .info {
+    border-bottom: 1px solid $color-light-gray;
+    padding-bottom: 20px;
+  }
+  h5,
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.tags {
+  @include inlined(10px, 18px, 3px);
+  font-family: 'oswaldregular', sans-serif;
+  color: $color-blue;
+  text-transform: uppercase;
+  li {
+    margin-right: 15px;
+    padding-left: 10px;
+    position: relative;
+    &:before {
+      @include pos(absolute, 0, 0);
+      content: '\2022';
+      color: $color-blue;
+      font-family: 'oswalddemibold', sans-serif;
+    }
+  }
+}
+
+@include tab {
+  .top-slider {
+    .slick-prev {
+      left: 30px;
+    }
+    .slick-next {
+      right: 30px;
+    }
+  }
+}
+
+@include lap {
+  h2 {
+    margin-bottom: 75px;
+  }
+  .courses {
+    float: right;
+    padding-left: 40px;
+    width: calc(100% - 241px);
+  }
+  .courses-list {
+    margin-bottom: 45px;
+    > li {
+      box-shadow: 0 2px 10px rgba(2, 2, 2, 0);
+      padding: 30px 0 0 25px;
+      transition: box-shadow .3s ease;
+    }
+    .info {
+      padding-right: 25px;
+      transition: border .3s ease;
+    }
+    h5,
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  .tags {
+    font-size: 12px;
+    line-height: 24px;
+  }
+}
+
+@include desk {
+  .courses {
+    padding-left: 60px;
+  }
+  .courses-list {
+    margin-bottom: 60px;
+    > li {
+      padding: 40px 0 0 30px;
+    }
+    .info {
+      padding: 0 30px 30px 0;
+    }
+  }
+}
+
+.no-dev {
+  .courses-list {
+    > li:hover {
+      box-shadow: 0 2px 10px rgba(2, 2, 2, 0.1);
+      .info {
+        border-color: $color-transparent;
+      }
+    }
+    .info {
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

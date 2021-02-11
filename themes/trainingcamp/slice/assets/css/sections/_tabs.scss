@@ -1,0 +1,118 @@
+.tab-nav {
+  margin: 0 auto 35px;
+  max-width: 340px;
+  form {
+    width: 100%;
+  }
+  ul {
+    text-align: center;
+  }
+  li,
+  .form-row {
+    background: transparent;
+    border: 1px solid $color-light-gray;
+    color: $color-light-sky;
+    font: 14px/28px 'oswaldmedium', sans-serif;
+    letter-spacing: 3px;
+    margin: -1px 0 0;
+    text-transform: uppercase;
+    transition: background .3s ease;
+    &:before {
+      display: none;
+    }
+    &.active {
+      color: $color-dark-gray;
+    }
+    &.special {
+      background: $color-dark-gray;
+      border-color: transparent;
+      color: $color-white;
+
+      &.active {
+        background: $color-blue;
+      }
+    }
+  }
+  .form-row {
+    border: none;
+  }
+  a {
+    color: inherit;
+    display: block;
+    height: 100%;
+    padding: 12px 20px 10px;
+    transition: color .3s ease;
+  }
+  button,
+  select {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  select {
+    font-family: 'oswaldregular', sans-serif;
+  }
+  button {
+    min-height: 44px;
+  }
+}
+.tab-content {
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+@include tab {
+  .tab-nav {
+    max-width: 680px;
+    ul {
+      @include flex(row, flex-start, flex-start, wrap);
+      padding-top: 1px;
+    }
+    li {
+      width: 50%;
+    }
+  }
+}
+
+@include lap {
+  .tab-nav {
+    margin-bottom: 45px;
+    max-width: none;
+    ul {
+      padding: 0;
+    }
+    li {
+      width: 25%;
+      margin: 0;
+    }
+    a {
+      padding: 15px 20px 14px;
+    }
+    button {
+      min-height: 68px;
+    }
+  }
+}
+@include desk {
+  .tab-nav {
+    margin-bottom: 75px;
+  }
+}
+
+.no-dev {
+  .tab-nav {
+    li {
+      &:hover {
+        color: $color-sky;
+      }
+      &.active:hover {
+        color: $color-dark-gray;
+      }
+      &.special:hover {
+        background: $color-blue;
+        color: $color-white;
+      }
+    }
+  }
+}

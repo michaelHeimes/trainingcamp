@@ -1,0 +1,59 @@
+.wp-pagenavi {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  font: 18px/30px 'inconsolataregular', sans-serif;
+  a,
+  span,
+  button {
+    width: auto;
+    padding: 0 10px;
+    transition: color .3s ease;
+    vertical-align: middle;
+    color: $color-light-sky;
+  }
+  .previouspostslink {
+    float: left;
+  }
+  .nextpostslink {
+    float: right;
+  }
+  .current {
+    color: $color-dark-sky;
+    cursor: auto;
+  }
+  .previouspostslink,
+  .nextpostslink {
+    text-indent: -9999px;
+    display: none;
+  }
+}
+@include tab {
+  .wp-pagenavi {
+    .previouspostslink,
+    .nextpostslink {
+      display: inline-block;
+    }
+  }
+}
+@include lap {
+  .wp-pagenavi {
+    a,
+    span,
+    button {
+      padding: 0 20px;
+    }
+  }
+}
+
+.no-dev {
+  .wp-pagenavi {
+    a,
+    span,
+    button {
+      &:hover {
+        color: $color-dark-sky;
+      }
+    }
+  }
+}

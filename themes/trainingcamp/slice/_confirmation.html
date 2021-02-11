@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="no-dev">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+				content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="shortcut icon" href="dist/images/apple-icon.png"
+				type="image/x-icon">
+	<link rel="icon" href="dist/images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="dist/images/apple-icon.png"/>
+	<meta content="telephone=no" name="format-detection">
+	<title>TrainingCamp</title>
+	<link rel="stylesheet" href="dist/css/checkout.css"/>
+	<link rel="stylesheet" href="http://addtocalendar.com/atc/1.5/atc-style-blue.css"/>
+</head>
+<body>
+
+<main class="wrapper">
+
+	//= templates/header
+	//= templates/search-panel
+
+	<div class="page-wrap congrats">
+		<div class="section">
+			<div class="container small">
+
+				//= templates/bread-crumbs
+
+				<div class="title">
+					<h2>Congratulations!</h2>
+				</div>
+				<h3>Next Steps</h3>
+				<p>Please note that enrolling student and/or approving manager will be contacted by a Training Camp representative upon receipt of this registertion to confirm course availability and/or payment arrangements for the selected course.</p>
+				<p>We highly suggest you do not finalize any travel plans until this registration is confirmed by a Training Camp representative.</p>
+				<!--<div class="buttons">-->
+				<!--<span class="btn btn-blue">add to calendar</span>-->
+				<!--</div>-->
+				<div class="buttons">
+                    <span class="addtocalendar atc-style-blue">
+                        <var class="atc_event">
+                            <var class="atc_date_start">2017-05-04 00:00:00</var>
+                            <var class="atc_date_end">2017-06-04 24:00:00</var>
+                            <var class="atc_timezone">America/Chicago</var>
+                            <var class="atc_title">Star Wars Day Party</var>
+                            <var class="atc_description">May the force be with you</var>
+                            <var class="atc_location">Tatooine</var>
+                            <var class="atc_organizer">Training Camp</var>
+                            <var class="atc_organizer_email">luke@starwars.com</var>
+                        </var>
+                        <var class="atc_event">
+                            <var class="atc_date_start">2017-05-04 00:00:00</var>
+                            <var class="atc_date_end">2017-07-04 24:00:00</var>
+                            <var class="atc_timezone">America/Chicago</var>
+                            <var class="atc_title">Star Wars Day Party</var>
+                            <var class="atc_description">May the force be with you</var>
+                            <var class="atc_location">Tatooine</var>
+                            <var class="atc_organizer">Training Camp</var>
+                            <var class="atc_organizer_email">luke@starwars.com</var>
+                        </var>
+                    </span>
+				</div>
+			</div>
+		</div>
+
+	</div><!--PAGE END-->
+
+	//= templates/footer
+
+</main><!-- WRAPPER END -->
+<div class="popups"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="dist/js/global.js"></script>
+<script type="text/javascript">(function () {
+  if (window.addtocalendar)if (typeof window.addtocalendar.start == "function")return;
+  if (window.ifaddtocalendar == undefined) {
+    window.ifaddtocalendar = 1;
+    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+    s.type = 'text/javascript';
+    s.charset = 'UTF-8';
+    s.async = true;
+    s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://addtocalendar.com/atc/1.5/atc.min.js';
+    var h = d[g]('body')[0];
+    h.appendChild(s);
+  }
+})();
+</script>
+</body>
+</html>

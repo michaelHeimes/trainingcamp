@@ -1,0 +1,47 @@
+.location-filter-list {
+  height: auto !important;
+}
+
+.location-filter-list li {
+  display: none;
+}
+
+.location-filter-list li:first-child,
+.location-filter-list li:nth-child(2),
+.location-filter-list li:nth-child(3) {
+  display: block;
+}
+
+.location-filter-list.show-all-location-filters li {
+  display: block;
+}
+
+.hidden-btn {
+  display: none !important;
+}
+
+.course-details.show-course-details {
+  display: table-row;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: all .5s ease;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+
+.fade-leave-active {
+  opacity: 0;
+  transition: all .5s ease;
+}

@@ -1,0 +1,133 @@
+.custom-section-landing-page h1,
+.custom-section-landing-page h2,
+.custom-section-landing-page h2 {
+	text-align: left;
+	text-transform: none;
+    letter-spacing: 0px !important;	
+}
+
+.custom-section-landing-page .btn {
+	font-size: 18px;
+	font-size: 18px;
+	color: #FFFFFF;
+	background-color: #3186C8;
+	letter-spacing: 1.08px;
+	text-align: center;
+	line-height: 18px;
+	min-width: 100%;
+	padding: 1.334em;
+}
+
+.custom-section-landing-page h2 {
+	font: normal 700 24px/36px 'objektiv-mk2',sans-serif;
+}
+
+.custom-section-landing-page .banner {
+	position: relative;
+	min-height: 690px;
+	padding: 23.45em 0 5em;
+}
+
+.custom-section-landing-page .banner h1,
+.custom-section-landing-page .banner h2 {
+	color: #fff;
+	font: normal 700 60px/72px 'objektiv-mk2',sans-serif;
+	text-align: left;
+	margin-bottom: .92em;
+}
+
+.custom-section-landing-page .banner .bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.custom-section-landing-page .sticky-form-wrap {
+	color: #fff;
+	position: absolute;
+	z-index: 1;
+	top: 200px;
+	right: 0;
+	background-color: #001F4D;
+	padding: 5.2em 4.38em;
+}
+
+.custom-section-landing-page .sticky-form-wrap .top {
+	text-align: center;
+}
+
+.custom-section-landing-page .sticky-form-wrap .top h2 {
+	margin-bottom: .88em;
+}
+
+.custom-section-landing-page .sticky-form-wrap .break {
+	background-color: #234e81;
+	height: 2px;
+	width: calc(100% - 4px);
+	margin: 2.9em auto 2.1em;
+}
+
+.custom-section-landing-page .sticky-form-wrap .bottom h2 {
+	margin-bottom: 0.3em;	
+}
+
+.custom-section-landing-page .sticky-form-wrap .bottom p {
+	font: normal 700 15px/30px 'objektiv-mk2',sans-serif;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	text-align: center;
+	margin-bottom: .68em;
+}
+
+.custom-section-landing-page .sticky-form-wrap .bottom p label:not(.form-label) {
+	display: none;
+}
+
+.custom-section-landing-page .sticky-form-wrap .bottom p label {
+	font: normal 400 13px/13px 'objektiv-mk2',sans-serif;
+	color: #FFFFFF;
+	letter-spacing: 0;
+	display: inline-block;
+	text-transform: none;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 0.8em;
+}
+
+.custom-section-landing-page .sticky-form-wrap .bottom form {
+	padding-top: 1.8em;
+}
+
+.custom-section-landing-page .sticky-form-wrap .bottom input,
+.custom-section-landing-page .sticky-form-wrap .bottom textarea {
+	background-color: #fff;
+}
+
+.section.custom-section-landing-page {
+	padding-top: 50px;
+}
+
+
+@media screen and (min-width: 375px) {
+	.custom-section-landing-page .btn {
+		min-width: 330px;
+	}	
+}
+
+@media screen and (min-width: 768px) {
+	
+	.custom-section-landing-page h2 {
+		font: normal 700 36px/36px 'objektiv-mk2',sans-serif;
+	}
+		
+}
+
+@media screen and (min-width: 1280px) {
+
+}
+
+

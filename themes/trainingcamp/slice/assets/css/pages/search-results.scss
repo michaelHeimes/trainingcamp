@@ -1,0 +1,132 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+@import "../sections/pagination";
+.page-wrap {
+  padding-top: 50px;
+}
+#search-form {
+  margin-bottom: 20px;
+  .form-row {
+    margin-bottom: 0;
+  }
+  .large-input {
+    button[type="submit"] {
+      text-indent: -9999px;
+      transform: rotateY(180deg);
+      background: url('#{$path-svg}/dark-search.svg') no-repeat center center / 17px auto;
+    }
+  }
+}
+#manage-results {
+  margin-bottom: 40px;
+  .form-row {
+    margin-bottom: 10px;
+  }
+}
+.results-header {
+  text-transform: uppercase;
+  font-family: "oswaldlight", sans-serif;
+  .col {
+    margin-bottom: 20px;
+  }
+  strong {
+    font-family: "oswaldbold", sans-serif;
+  }
+  .show {
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+    &.active {
+      font-family: "oswaldbold", sans-serif;
+      text-decoration: underline;
+    }
+  }
+  input[type="radio"] + label {
+    margin: 0 10px !important;
+    padding: 0;
+    font: 14px/16px 'oswaldlight', sans-serif;
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+  input[type="radio"]:checked + label {
+    font-family: 'oswaldmedium', sans-serif;
+    border-bottom: 1px solid $color-black;
+  }
+}
+.results-list {
+  li {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $color-light-gray;
+  }
+  h5 {
+    margin-bottom: 5px;
+  }
+  p {
+    strong {
+      font-family: 'inconsolatabold', sans-serif;
+    }
+  }
+}
+@include tab {
+  #manage-results {
+    .form-row.form-row-first,
+    .form-row.form-row-last {
+      width: auto;
+    }
+  }
+  .results-header {
+    .col {
+      & + .col {
+        text-align: right;
+      }
+    }
+  }
+}
+@include lap {
+  .page-wrap {
+    padding-top: 180px;
+  }
+  #search-form {
+    margin-bottom: 10px;
+    .form-row.large-input {
+      input[type="search"] {
+        letter-spacing: 4px;
+      }
+    }
+  }
+  #manage-results {
+    margin-bottom: 54px;
+  }
+  .results-list {
+    margin-bottom: 50px;
+    li {
+      margin-bottom: 36px;
+      padding-bottom: 30px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+  }
+  .results-header {
+    font-size: 14px;
+    letter-spacing: 3px;
+    input[type="radio"] + label {
+      padding: 5px 0 0;
+      margin: 0 !important;
+    }
+  }
+}
+@include desk {
+  .page-wrap {
+    padding-top: 270px;
+  }
+  .container {
+    max-width: 1070px;
+  }
+}

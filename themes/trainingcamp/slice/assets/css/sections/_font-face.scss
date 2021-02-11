@@ -1,0 +1,87 @@
+@import "../libs/variables";
+//
+@font-face {
+	font-family: 'oswaldbold';
+	src: url('#{$path-fonts}/oswald-bold-webfont.eot');
+	src: url('#{$path-fonts}/oswald-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('#{$path-fonts}/oswald-bold-webfont.woff2') format('woff2'),
+	url('#{$path-fonts}/oswald-bold-webfont.woff') format('woff'),
+	url('#{$path-fonts}/oswald-bold-webfont.ttf') format('truetype'),
+	url('#{$path-fonts}/oswald-bold-webfont.svg#oswaldbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'oswalddemibold';
+	src: url('#{$path-fonts}/oswald-demibold-webfont.eot');
+	src: url('#{$path-fonts}/oswald-demibold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('#{$path-fonts}/oswald-demibold-webfont.woff2') format('woff2'),
+	url('#{$path-fonts}/oswald-demibold-webfont.woff') format('woff'),
+	url('#{$path-fonts}/oswald-demibold-webfont.ttf') format('truetype'),
+	url('#{$path-fonts}/oswald-demibold-webfont.svg#oswalddemibold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'oswaldmedium';
+	src: url('#{$path-fonts}/oswald-medium-webfont.eot');
+	src: url('#{$path-fonts}/oswald-medium-webfont.eot?#iefix') format('embedded-opentype'),
+	url('#{$path-fonts}/oswald-medium-webfont.woff2') format('woff2'),
+	url('#{$path-fonts}/oswald-medium-webfont.woff') format('woff'),
+	url('#{$path-fonts}/oswald-medium-webfont.ttf') format('truetype'),
+	url('#{$path-fonts}/oswald-medium-webfont.svg#oswaldmedium') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'oswaldregular';
+	src: url('#{$path-fonts}/oswald-regular-webfont.eot');
+	src: url('#{$path-fonts}/oswald-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('#{$path-fonts}/oswald-regular-webfont.woff2') format('woff2'),
+	url('#{$path-fonts}/oswald-regular-webfont.woff') format('woff'),
+	url('#{$path-fonts}/oswald-regular-webfont.ttf') format('truetype'),
+	url('#{$path-fonts}/oswald-regular-webfont.svg#oswald_regularregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'oswaldlight';
+	src: url('#{$path-fonts}/oswald-light-webfont.eot');
+	src: url('#{$path-fonts}/oswald-light-webfont.eot?#iefix') format('embedded-opentype'),
+	url('#{$path-fonts}/oswald-light-webfont.woff2') format('woff2'),
+	url('#{$path-fonts}/oswald-light-webfont.woff') format('woff'),
+	url('#{$path-fonts}/oswald-light-webfont.ttf') format('truetype'),
+	url('#{$path-fonts}/oswald-light-webfont.svg#oswaldlight') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'inconsolatabold';
+	src: url('#{$path-fonts}/inconsolata-bold-webfont.eot');
+	src: url('#{$path-fonts}/inconsolata-bold-webfont.eot?#iefix') format('embedded-opentype'),
+	url('#{$path-fonts}/inconsolata-bold-webfont.woff2') format('woff2'),
+	url('#{$path-fonts}/inconsolata-bold-webfont.woff') format('woff'),
+	url('#{$path-fonts}/inconsolata-bold-webfont.ttf') format('truetype'),
+	url('#{$path-fonts}/inconsolata-bold-webfont.svg#inconsolatabold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'inconsolataregular';
+	src: url('#{$path-fonts}/inconsolata-regular-webfont.eot');
+	src: url('#{$path-fonts}/inconsolata-regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('#{$path-fonts}/inconsolata-regular-webfont.woff2') format('woff2'),
+	url('#{$path-fonts}/inconsolata-regular-webfont.woff') format('woff'),
+	url('#{$path-fonts}/inconsolata-regular-webfont.ttf') format('truetype'),
+	url('#{$path-fonts}/inconsolata-regular-webfont.svg#inconsolataregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
+}

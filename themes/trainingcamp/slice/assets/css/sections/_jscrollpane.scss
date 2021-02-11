@@ -1,0 +1,143 @@
+.jspContainer {
+  overflow: hidden;
+  position: relative;
+}
+
+.jspPane {
+  position: absolute;
+}
+
+.jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.jspHorizontalBar {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95% !important;
+  height: 3px;
+  overflow: hidden;
+}
+
+.jspCap {
+  display: none;
+}
+
+.jspHorizontalBar .jspCap {
+  float: left;
+}
+
+.jspTrack {
+  position: relative;
+  //background: linear-gradient(top, transparent 0%, transparent 32%, $color-white 33%, rgba($color-white, .2) 34%, transparent 35%);
+}
+
+.jspDrag {
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag {
+  position: relative;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.jspArrow {
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.jspArrow.jspDisabled {
+  cursor: default;
+  background: #80808d;
+}
+
+.jspVerticalBar .jspArrow {
+  height: 4px;
+}
+
+.jspHorizontalBar .jspArrow {
+  width: 4px;
+  float: left;
+  height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus {
+  outline: none;
+}
+
+.jspCorner {
+  background: #eeeef4;
+  float: left;
+  height: 100%;
+}
+.jspHorizontalBar {
+
+}
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner {
+  margin: 0 -3px 0 0;
+}
+/* LIGHT-SCROLL THEME */
+.light-scroll {
+  .jspVerticalBar {
+    width: 5px;
+  }
+  .jspDrag {
+    background-color: #d4d4d4;
+  }
+}
+
+/* DARK-SCROLL THEME */
+.dark-scroll {
+  .jspVerticalBar {
+    .jspTrack {
+      //background-color: $color-light-gray;
+      background-color: transparent;
+      .jspDrag {
+        background-color: $color-sky;
+      }
+    }
+  }
+  .jspHorizontalBar {
+    .jspTrack {
+      //background-color: $color-light-gray;
+      background-color: transparent;
+    }
+  }
+
+  .jspDrag {
+    background-color: $color-gray;
+  }
+}
+/* TRANSPARENT-SCROLL THEME */
+.transparent-scroll {
+  .jspVerticalBar {
+    .jspTrack {
+      background-color: transparent;
+    }
+  }
+  .jspHorizontalBar {
+    .jspTrack {
+      background-color: transparent;
+    }
+  }
+
+  .jspDrag {
+    background-color: transparent;
+  }
+}

@@ -1,0 +1,16 @@
+.slick-prev,
+.slick-next {
+  @include pos(absolute, calc(50% - 20px));
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  @include bg(center, center, contain);
+}
+.slick-prev {
+  left: 0;
+  @extend .arrow-left;
+}
+.slick-next {
+  right: 0;
+  @extend .arrow-right;
+}

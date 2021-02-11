@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" class="no-dev">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+				content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="shortcut icon" href="dist/images/apple-icon.png"
+				type="image/x-icon">
+	<link rel="icon" href="dist/images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="dist/images/apple-icon.png"/>
+	<meta content="telephone=no" name="format-detection">
+	<title>Search results</title>
+	<link rel="stylesheet" href="dist/css/search-results.css"/>
+</head>
+<body>
+
+<main class="wrapper">
+
+	//= templates/header
+	//= templates/search-panel
+
+	<div class="page-wrap inner">
+		<div class="section">
+			<div class="container">
+				<div class="title">
+					<h2>Search results</h2>
+				</div>
+				<form action="/" id="search-form">
+					<div class="form-wrap">
+						<div class="form-row form-row-wide large-input">
+							<input type="search" name="search-field" placeholder="search for something...">
+							<button type="submit">Search</button>
+						</div>
+					</div>
+				</form>
+				<form action="/" id="manage-results">
+					<div class="form-wrap">
+						<div class="form-row form-row-first">
+							<input type="checkbox" id="option-1">
+							<label for="option-1">Training Courses</label>
+						</div>
+						<div class="form-row form-row-last">
+							<input type="checkbox" id="option-2">
+							<label for="option-2">Guaranteed to Run</label>
+						</div>
+					</div>
+				</form>
+				<div class="results-header">
+					<div class="columns">
+						<div class="col"><p>About <span class="qty">439</span> results found for <strong
+								class="query">"management"</strong></p></div>
+						<!--<div class="col"><p>Results per page: <span class="show active">20</span> <span class="show">40</span> <span class="show">80</span></p></div>-->
+						<div class="col">
+							<form action="/">
+								<p>Results per page:
+									<input type="radio" name="results-per-page" id="qty-20" checked>
+									<label for="qty-20">20</label>
+									<input type="radio" name="results-per-page" id="qty-40">
+									<label for="qty-40">40</label>
+									<input type="radio" name="results-per-page" id="qty-80">
+									<label for="qty-80">80</label>
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="results-list">
+					<p class="not-found">Nothing Found!</p>
+					<!--<ul>-->
+						<!--<li>-->
+							<!--<h5>CISSP Certification Training Camp</h5>-->
+							<!--<p>Our 6 Day CISSP Certification Training Camp is the only Official (ISC)² Exam Prep Boot Camp. Our course features exclusive options, such as our Training Camp-->
+								<!--<strong>designed Official</strong> (ISC)² Evening Review Sessions, and hosting of the Official (ISC)² CISSP exam at the end of class.-->
+							<!--</p>-->
+						<!--</li>-->
+						<!--<li>-->
+							<!--<h5>CEH — Certified Ethical Hacker</h5>-->
+							<!--<p>Training Camp's award winning certification programs offer everything from exclusive pre-class online study videos, In-class custom hands-on iLabs, and post-class exam certification protection.</p>-->
+						<!--</li>-->
+						<!--<li>-->
+							<!--<h5>CISSP Certification Training Camp</h5>-->
+							<!--<p>Our 6 Day CISSP Certification Training Camp is the only Official (ISC)² Exam Prep Boot Camp. Our course features exclusive options, such as our Training Camp-->
+								<!--<strong>designed Official</strong> (ISC)² Evening Review Sessions, and hosting of the Official (ISC)² CISSP exam at the end of class.-->
+							<!--</p>-->
+						<!--</li>-->
+						<!--<li>-->
+							<!--<h5>CEH — Certified Ethical Hacker</h5>-->
+							<!--<p>Training Camp's award winning certification programs offer everything from-->
+								<!--<strong>exclusive</strong> pre-class online study videos, In-class custom hands-on iLabs, and post-class exam certification protection.-->
+							<!--</p>-->
+						<!--</li>-->
+					<!--</ul>-->
+				</div>
+
+				//= templates/pagination
+
+			</div>
+
+		</div>
+
+		//= templates/footer
+
+	</div><!--PAGE END-->
+
+</main><!-- WRAPPER END -->
+<div class="popups"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="dist/js/global.js"></script>
+<script src="dist/js/search-results.js"></script>
+</body>
+</html>

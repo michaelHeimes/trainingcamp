@@ -1,0 +1,90 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+
+.page-wrap {
+  padding-top: 50px;
+}
+h3 {
+  font-family: 'oswaldregular', sans-serif;
+}
+
+.send-message {
+  margin-bottom: 30px;
+  .buttons {
+    margin-top: 30px;
+    .btn {
+      width: auto;
+    }
+  }
+}
+
+.contact-info {
+  text-transform: uppercase;
+  h3 {
+    margin-bottom: 20px;
+  }
+  h5 {
+    color: $color-blue-gray;
+    font-family: 'inconsolatabold', sans-serif;
+    line-height: 20px;
+  }
+  p,
+  address {
+    color: $color-dark-sky;
+    margin-bottom: 15px;
+  }
+}
+div.wpcf7-validation-errors {
+  display: none !important;
+}
+@include lap {
+  .page-wrap {
+    padding-top: 180px;
+  }
+  h3 {
+    margin-bottom: 8px;
+  }
+  .send-message {
+    float: left;
+    margin-right: 90px;
+    width: 60%;
+    max-width: 800px;
+    .buttons {
+      margin-top: 45px;
+    }
+    .btn {
+      letter-spacing: 4px;
+      min-width: 280px;
+    }
+  }
+  .contact-info {
+    overflow: hidden;
+    h3 {
+      margin-bottom: 30px;
+    }
+    h5 {
+      font-size: 14px;
+      letter-spacing: 3px;
+    }
+    p,
+    address {
+      font-size: 14px;
+      line-height: 20px;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+@include desk {
+  .page-wrap {
+    padding-top: 270px;
+  }
+  .forms {
+    padding-top: 60px;
+  }
+  .send-message {
+    margin-right: 180px;
+  }
+}

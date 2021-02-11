@@ -1,0 +1,114 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+
+.about-list {
+  text-align: center;
+  li {
+    margin-bottom: 30px;
+  }
+  figure {
+    @include bg(50%, 50%, contain);
+    display: block;
+    height: 52px;
+    margin: 0 auto 15px;
+    width: 52px;
+  }
+}
+
+.partners-list {
+  li {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  figure {
+    margin: 0 auto 20px;
+    max-width: 150px;
+    filter: sepia(1) hue-rotate(165deg) opacity(0.5);
+    img {
+      display: block;
+      margin: 0 auto;
+      width: auto;
+      max-width: 100%;
+    }
+  }
+}
+
+@include xxxmob {
+  .about-list {
+    margin: 0 -20px;
+    overflow: hidden;
+    li {
+      float: left;
+      margin-bottom: 0;
+      padding: 0 20px;
+      width: 33.33%;
+    }
+  }
+  .partners-list {
+    li {
+      @include flex(row, space-between, center);
+    }
+    figure {
+      margin: 0;
+      flex-shrink: 0;
+      padding-right: 30px;
+      max-width: 150px;
+      width: 25%;
+      img {
+        display: block;
+        margin: 0 auto;
+        width: auto;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@include lap {
+  .top-bg {
+    p {
+      font: 18px/30px 'inconsolataregular', sans-serif;
+    }
+  }
+  .about-list {
+    margin: 0 -30px;
+    li {
+      padding: 0 30px;
+    }
+    figure {
+      margin-bottom: 25px;
+    }
+  }
+  .partners-list {
+    li {
+      justify-content: flex-end;
+      margin-bottom: 45px;
+    }
+    figure {
+      padding-right: 50px;
+      max-width: 270px;
+      width: 30%;
+    }
+    .info {
+      width: 70%;
+    }
+  }
+}
+@include desk {
+  .about-list {
+    margin: 0 -60px;
+    li {
+      padding: 0 60px;
+    }
+  }
+  .partners-list {
+    li {
+      margin-bottom: 68px;
+    }
+  }
+}
+

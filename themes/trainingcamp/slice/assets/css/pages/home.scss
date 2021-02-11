@@ -1,0 +1,615 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+@import "../sections/slick";
+@import "../sections/slick-theme";
+@import "../sections/jcf";
+
+section {
+  margin-bottom: 40px;
+}
+.top-bg {
+  letter-spacing: 4px;
+}
+.as-seen-on {
+  padding-top: 30px;
+  border-bottom: 1px solid $color-light-gray;
+  h4 {
+    margin-bottom: 20px;
+  }
+  ul {
+    @include flex(row, space-between, center, wrap);
+  }
+  li {
+    height: 16px;
+    margin: 0 20px 36px 0;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  img {
+    width: auto;
+    height: 100%;
+    filter: grayscale(100%);
+    opacity: .3;
+  }
+}
+
+.popular-courses {
+  text-align: center;
+  .content-block {
+    position: relative;
+    padding-top: 40px;
+    z-index: 1;
+  }
+  .slide {
+    position: relative;
+    width: 100%;
+    height: 205px;
+    padding: 10px 0;
+    color: $color-white;
+    text-transform: uppercase;
+    @include bg(center, center, cover);
+    strong, small {
+      display: block;
+      text-align: center;
+    }
+    strong {
+      font: 29px/29px 'oswaldmedium', sans-serif;
+    }
+    small {
+      font: 10px/12px 'inconsolatabold', sans-serif;
+    }
+  }
+  .img {
+    @include pos(absolute, 0, 0, 0, 0);
+    @include bg(center, center, cover);
+    &:before,
+    &:after {
+      content: "";
+      @include pos(absolute, 0, 0, 0, 0);
+    }
+    &:after {
+      background: rgba($color-black, .4);
+      //opacity: 1;
+      //transition: opacity .3s ease;
+      z-index: 1;
+    }
+  }
+  figure:after {
+    background-color: $color-white;
+    opacity: 0;
+    z-index: -1;
+  }
+  .more {
+    position: relative;
+    display: inline-block;
+    font: 14px/18px 'oswaldmedium', sans-serif;
+    &:after {
+      content: "";
+      @include pos(absolute, $bottom: 0, $left: center);
+      width: 100%;
+      height: 1px;
+      background-color: $color-white;
+    }
+  }
+}
+
+.popular-courses,
+.solutions {
+  figure {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    padding-top: 10px;
+    &:before,
+    &:after {
+      content: "";
+      @include pos(absolute, 0, 0, 0, 0);
+      transform: rotate(45deg);
+    }
+    &:before {
+      border: 1px solid $color-white;
+    }
+  }
+  span,
+  span + span {
+    @include pos(absolute, 0, 0, 0, 0);
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+    &:before,
+    &:after {
+      content: "";
+      @include pos(absolute, -5px, -5px);
+      border: solid $color-white;
+    }
+    &:before {
+      width: 100%;
+      height: 5px;
+      border-width: 1px 1px 0 0;
+    }
+    &:after {
+      width: 5px;
+      height: 100%;
+      border-width: 0 0 1px 1px;
+    }
+  }
+  span + span {
+    &:before,
+    &:after {
+      content: "";
+      @include pos(absolute, -10px, -10px);
+    }
+  }
+}
+
+.why-choose {
+  text-align: center;
+  letter-spacing: 2px;
+  h6 {
+    color: $color-sky;
+  }
+}
+
+.solutions {
+  padding: 40px 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  figure {
+    position: relative;
+    margin-bottom: 40px;
+    @include bg(center, center, auto 30px);
+    svg {
+      width: 40px;
+      @include pos(absolute, center, center);
+    }
+  }
+  li {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  h6 {
+    margin-bottom: 5px;
+  }
+  .more {
+    margin-bottom: 20px;
+    a {
+      position: relative;
+      display: inline-block;
+      color: $color-white;
+      font-size: 10px;
+      font-family: 'oswaldmedium', sans-serif;
+      &:after {
+        content: "";
+        @include pos(absolute, $bottom: 0, $left: center);
+        width: 100%;
+        height: 1px;
+        background-color: $color-white;
+      }
+    }
+  }
+}
+
+.quote-slider {
+  h4 {
+    margin-bottom: 40px;
+  }
+  .slide-num {
+    float: right;
+    margin-top: -35px;
+    padding: 0 20px 10px;
+    text-align: right;
+    background-color: $color-white;
+  }
+}
+
+.careers {
+  .title {
+    margin-bottom: 0;
+  }
+  h6 {
+    margin-bottom: 10px;
+  }
+}
+
+@include tab {
+  section {
+    margin-bottom: 60px;
+  }
+  .popular-courses {
+    .slide {
+      position: relative;
+      height: 480px;
+      padding: 120px 60px 60px;
+    }
+    .content-block {
+      width: 50%;
+      margin: 0 auto;
+      figure {
+        margin-bottom: 20px;
+      }
+    }
+    h5 {
+      margin-bottom: 20px;
+    }
+  }
+  .solutions {
+    ul {
+      @include flex(row, space-between);
+    }
+    li {
+      @include flex(column, space-between);
+      width: calc(30% - 20px);
+      margin: 0 10px;
+      text-align: center;
+    }
+    h6 {
+      flex-grow: 1;
+    }
+    .more {
+
+    }
+  }
+  .careers {
+    margin-bottom: 0;
+  }
+  .choose-course {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    .dropdown {
+      margin: 0 1px;
+      width: calc(50% - 2px);
+      float: left;
+      & + .dropdown {
+        float: right;
+      }
+    }
+  }
+}
+
+@include lap {
+  section {
+    margin-bottom: 80px;
+  }
+  .top-bg {
+    .content-block {
+      height: calc(100vh - 34px);
+    }
+  }
+  .choose-course {
+    margin-top: -34px;
+  }
+  .as-seen-on {
+    padding-top: 73px;
+    h4 {
+      margin-bottom: 54px;
+    }
+    li {
+      height: 32px;
+      margin-bottom: 75px;
+    }
+  }
+  .popular-courses {
+    .slide {
+      padding: 80px 10px 20px;
+      h5 {
+        margin-bottom: 20px;
+      }
+      figure {
+        padding-top: 30px;
+      }
+    }
+    .content-block {
+      position: relative;
+      width: 240px;
+      padding-top: 100px;
+      z-index: 1;
+    }
+    .slick-center {
+      width: 520px !important;
+    }
+  }
+  .why-choose {
+    h2 {
+      margin-bottom: 70px;
+    }
+    h5 {
+      margin-bottom: 10px;
+    }
+  }
+  .popular-courses,
+  .solutions {
+    .slide {
+      figure {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 70px;
+        background-size: auto 60px;
+      }
+    }
+    span,
+    span + span {
+      &:before,
+      &:after {
+        top: -10px;
+        left: -10px;
+      }
+      &:before {
+        height: 10px;
+      }
+      &:after {
+        width: 10px;
+      }
+    }
+    span + span {
+      &:before,
+      &:after {
+        top: -20px;
+        left: -20px;
+      }
+    }
+  }
+  .solutions {
+    h2 {
+      margin-bottom: 105px;
+    }
+    h5 {
+      margin-bottom: 8px;
+    }
+    .more a {
+      font-size: 14px;
+    }
+  }
+  .quote-slider {
+    h4 {
+      margin-bottom: 68px;
+    }
+    blockquote {
+      p {
+        margin-bottom: 60px;
+      }
+    }
+    .slide-num {
+      margin-top: -70px;
+    }
+  }
+  .careers {
+    h6 {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@include desk {
+  section {
+    margin-bottom: 150px;
+  }
+  .top-bg {
+    .content-block {
+      height: 920px;
+    }
+  }
+  .as-seen-on {
+    padding-top: 95px;
+  }
+  .popular-courses {
+    .slide {
+      height: 680px;
+      figure {
+        margin-bottom: 55px;
+        padding-top: 20px;
+      }
+      strong {
+        font-size: 58px;
+        line-height: 58px;
+      }
+      small {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 2px;
+      }
+      h5 {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+    .more {
+      line-height: 26px;
+      letter-spacing: 4px;
+    }
+    .content-block {
+      padding-top: 140px;
+      width: 300px;
+    }
+  }
+  .popular-courses,
+  .solutions {
+    .slide {
+      figure {
+        margin-bottom: 70px;
+      }
+    }
+  }
+  .solutions {
+    h2 {
+      margin-bottom: 128px;
+    }
+    figure {
+      margin-bottom: 55px;
+      background-size: auto 60px;
+    }
+  }
+  .quote-slider {
+    blockquote {
+      font-size: 32px;
+      line-height: 48px;
+      p {
+        margin-bottom: 76px;
+      }
+    }
+    h4 {
+      margin-bottom: 83px;
+    }
+    cite {
+      font-size: 32px;
+      line-height: 42px;
+    }
+  }
+  .careers {
+    h2 {
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.no-dev {
+  .popular-courses {
+    .slides {
+      max-width: 100%;
+      @include flex(row, center);
+    }
+    .slide {
+      width: 20%;
+      padding: 10px 0;
+      transition: padding .3s ease;
+      .img {
+        top: 10px;
+        bottom: 10px;
+        transition-property: top, bottom;
+        will-change: top, bottom;
+        transition: .3s ease;
+        &:before {
+          background: rgba($color-black,.5);
+          opacity: 0;
+          transition: opacity .3s ease;
+        }
+      }
+      .more {
+        transform: translateY(100px);
+        opacity: 0;
+        transition-property: transform, opacity;
+        transition: .3s ease-out;
+        will-change: transform;
+      }
+    }
+    figure {
+      transition: color .7s ease;
+      &:after {
+        transition: opacity 1s ease;
+      }
+    }
+    .slide:hover {
+      padding: 0;
+      .img {
+        top: 0;
+        bottom: 0;
+        &:before {
+          opacity: 1;
+        }
+      }
+      .more {
+        transform: translateY(0);
+        opacity: 1;
+        &:after {
+          width: 0;
+          transition: width .3s ease;
+        }
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+      figure {
+        color: $color-black;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .popular-courses,
+  .solutions {
+    span,
+    span + span {
+      &:before {
+        transition-property: height, top, left, opacity;
+        transition: .5s ease;
+        will-change: height, top, left, opacity;
+      }
+      &:after {
+        transition-property: width, top, left, opacity;
+        transition: .5s ease;
+        will-change: width, top, left, opacity;
+      }
+    }
+    .more a {
+      &:after {
+        width: 0;
+        transition: width .3s ease;
+      }
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+    .slide:hover {
+      span,
+      span + span {
+        &:before,
+        &:after {
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+        &:before {
+          height: 0;
+        }
+        &:after {
+          width: 0;
+        }
+      }
+    }
+  }
+  .solutions {
+    li {
+      figure:after {
+        display: none;
+      }
+      span,
+      span + span {
+        &:before {
+          transition-delay: 0s;
+        }
+        &:after {
+          transition-delay: 0s;
+        }
+      }
+      span + span {
+        &:before,
+        &:after {
+          transition-delay: .1s;
+        }
+      }
+      .more {
+        font-size: 14px;
+        letter-spacing: 4px;
+      }
+      h6 {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+
+
+

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="no-dev">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+				content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="shortcut icon" href="dist/images/apple-icon.png"
+				type="image/x-icon">
+	<link rel="icon" href="dist/images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="dist/images/apple-icon.png"/>
+	<meta content="telephone=no" name="format-detection">
+	<title>Checkout</title>
+	<link rel="stylesheet" href="dist/css/checkout.css"/>
+</head>
+<body>
+
+<main class="wrapper">
+
+	//= templates/header
+	//= templates/search-panel
+
+	<div class="page-wrap">
+		<ul class="woocommerce-error">
+			<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, tenetur.</li>
+		</ul>
+		<div class="section forms">
+			<div class="container">
+
+				//= templates/bread-crumbs
+
+				<div class="title">
+					<h2>01. checkout method</h2>
+				</div>
+				<div class="checkout-method">
+					<div class="wrap">
+						<div class="part">
+							<form action="/" id="login-form">
+								<div>
+									<h3>Returning Customers</h3>
+									<p>Sign In to speed up your checkout process.</p>
+								</div>
+									<p class="form-row form-row-wide">
+										<input type="email" placeholder="email" class="form-control" id="email">
+										<label for="email">Email*</label>
+									</p>
+									<p class="form-row form-row-wide">
+										<input type="password" placeholder="password" class="form-control" id="password">
+										<label for="password">Password*</label>
+										<a class="forgot-pass" href="#forgot-pass-form">Forgot your password?</a>
+									</p>
+								<div class="buttons">
+									<button type="submit" class="btn btn-blue">Sign in</button>
+								</div>
+							</form>
+							<form action="/" method="post" id="forgot-pass-form">
+								<div class="form-wrap">
+									<div class="message">
+										<h3>Forgot your password?</h3>
+										<p>Please enter your username or email address.</p>
+										<p>You will receive a link to create a new password via email.</p>
+									</div>
+									<p class="form-row form-row-wide">
+										<input class="form-control" type="text" placeholder="Username or email address" id="forgot-pass">
+										<label for="forgot-pass">Username or email address</label>
+										<a href="#login-form" class="back-to-login"><span class="arrow-left"></span>Back to login form</a>
+									</p>
+									<p class="buttons">
+										<button type="submit" class="btn btn-blue">RESET PASSWORD</button>
+									</p>
+								</div>
+							</form>
+						</div>
+						<div class="part">
+							<div>
+								<h3>Create Account</h3>
+								<p>Why should you register an account?</p>
+							</div>
+							<div class="content">
+								<ul>
+									<li>Fast & easy check out</li>
+									<li>Easy access to your order history & status</li>
+									<li>Fast & easy check out</li>
+									<li>Easy access to your order history & status</li>
+								</ul>
+							</div>
+							<div class="buttons">
+								<a href="login-register.html" class="btn btn-blue">register</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section">
+			<div class="container">
+				<div class="title">
+					<h2>02. order review</h2>
+					<p>Please choose your payment method from the following list. If you are unsure what to answer to any of these questions, please answer the best you can, as they can be altered later once registration is processed by our representatives.</p>
+				</div>
+				<form action="http://woocommerce.bigdropinc.net/cart/" method="post">
+					<ul class="wc_payment_methods payment_methods methods">
+						<li class="wc_payment_method payment_method_stripe">
+							<input id="payment_method_stripe" type="radio" class="input-radio" name="payment_method" value="stripe"
+										 checked='checked' data-order_button_text=""/>
+							<div class="payment_box payment_method_stripe form-wrap">
+								<p class="form-row form-row-wide stripe-card-number-wrap">
+									<input id="stripe-card-number" class="form-control input-text wc-credit-card-form-card-number"
+												 type="text" maxlength="20" autocomplete="off"
+												 placeholder="card number"
+												 name="stripe-card-number"/>
+									<label for="stripe-card-number">card number</label>
+								</p>
+								<p class="form-row form-row-first stripe-card-cvc-wrap">
+									<input id="stripe-card-cvc" class="form-control input-text wc-credit-card-form-card-cvc" type="text"
+												 autocomplete="off" placeholder="CVV" name="stripe-card-cvc"/>
+									<label for="stripe-card-cvc">CVV</label>
+								</p>
+								<p class="form-row form-row-last medium-6 stripe-card-expiry-wrap">
+									<input id="stripe-card-expiry" class="form-control input-text wc-credit-card-form-card-expiry"
+												 type="text" autocomplete="off" placeholder="MM / YYYY" name="stripe-card-expiry"/>
+									<label for="stripe-card-expiry">MM / YYYY</label>
+								</p>
+								<div class="clear"></div>
+							</div>
+						</li>
+					</ul>
+					<table class="shop_table shop_table_responsive cart">
+						<thead>
+						<tr>
+							<th class="product-name"></th>
+							<th class="product-quantity">Quantity</th>
+							<th class="product-price">Price</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr class="cart_item alt-table-row">
+							<td class="product-name">
+								<h3><a href="http://woocommerce.bigdropinc.net/product/product-8/">CCNA Boot Camp</a></h3>
+								<table class="course-info">
+									<thead>
+									<tr>
+										<th><span>Begin Date</span></th>
+										<th><span>end Date</span></th>
+										<th><span>delivery format</span></th>
+										<th><span>location</span></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td data-title="begin date">
+											<time datetime="2016-07-18">7/18/2016</time>
+										</td>
+										<td data-title="end date">
+											<time datetime="2016-08-24">8/24/2016</time>
+										</td>
+										<td data-title="delivery format">On-site</td>
+										<td data-title="location">Dallas, TX</td>
+									</tr>
+									</tbody>
+								</table>
+							</td>
+
+							<td class="product-quantity" data-title="Quantity">
+								<strong class="product-quantity">5</strong>
+							</td>
+
+							<td class="product-price" data-title="Price">
+								<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>150.00</span>
+							</td>
+						</tr>
+						<tr class="cart_item alt-table-row">
+							<td class="product-name">
+								<h3><a href="http://woocommerce.bigdropinc.net/product/product-8/">CCNA Boot Camp</a></h3>
+								<table class="course-info">
+									<thead>
+									<tr>
+										<th><span>Begin Date</span></th>
+										<th><span>end Date</span></th>
+										<th><span>delivery format</span></th>
+										<th><span>location</span></th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td data-title="begin date">
+											<time datetime="2016-07-18">7/18/2016</time>
+										</td>
+										<td data-title="end date">
+											<time datetime="2016-08-24">8/24/2016</time>
+										</td>
+										<td data-title="delivery format">On-site</td>
+										<td data-title="location">Dallas, TX</td>
+									</tr>
+									</tbody>
+								</table>
+							</td>
+
+							<td class="product-quantity" data-title="Quantity">
+									<strong class="product-quantity">5</strong>
+							</td>
+
+							<td class="product-price" data-title="Price">
+								<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>150.00</span>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="3" class="actions">
+								<a href="courses-group.html" class="arrow-left">edit your order</a>
+								<input id="_wpnonce" name="_wpnonce" value="291dbcfd46" type="hidden">
+								<input name="_wp_http_referer" value="/cart/" type="hidden">
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</form>
+				<div class="cart-collaterals">
+					<div class="cart_totals calculated_shipping">
+						<table class="shop_table shop_table_responsive">
+							<tbody>
+							<tr>
+								<td class="addition">
+									<p>By purchasing this course, I agree that approved payment arangements are required by a Training Camp representative to confirm & secure final enrollment.</p>
+								</td>
+								<td data-title="subtotal" class="cart-subtotal">
+									<span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">$</span>155.00</span>
+								</td>
+								<td data-title="Discount" class="discount"><span class="woocommerce-Price-amount amount">-<span
+										class="woocommerce-Price-currencySymbol">$</span>5.00</span>
+								</td>
+								<td data-title="Total" class="order-total"><strong><span class="woocommerce-Price-amount amount"><span
+										class="woocommerce-Price-currencySymbol">$</span>150.00</span></strong>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+
+						<div class="wc-proceed-to-checkout">
+							<a href="http://woocommerce.bigdropinc.net/checkout/"
+								 class="btn btn-blue checkout-button button alt wc-forward">Complete Order</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div><!--PAGE END-->
+
+	//= templates/footer
+
+</main><!-- WRAPPER END -->
+<div class="popups"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="dist/js/global.js"></script>
+<script src="dist/js/checkout.js"></script>
+</body>
+</html>

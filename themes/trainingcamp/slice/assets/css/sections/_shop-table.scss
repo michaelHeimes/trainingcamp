@@ -1,0 +1,332 @@
+table {
+  table-layout: fixed;
+}
+thead {
+  display: none;
+}
+th {
+  color: $color-dark-sky;
+  text-transform: uppercase;
+  font: 14px/26px 'oswaldmedium', sans-serif;
+}
+td {
+  position: relative;
+  display: block;
+  padding: 10px 0;
+  text-align: right;
+}
+td.product-quantity {
+  select {
+    width: auto;
+    text-align: right;
+  }
+}
+td.product-price {
+  font-family: "inconsolatabold", sans-serif;
+}
+td.product-name {
+  padding-bottom: 0;
+  h3 {
+    text-align: left;
+    font-family: 'oswaldbold', sans-serif;
+  }
+}
+td[data-title] {
+  padding-left: 40%;
+  &:before {
+    content: attr(data-title);
+    @include pos(absolute, center, 0);
+    width: 40%;
+    color: $color-dark-sky;
+    text-transform: uppercase;
+    text-align: left;
+    @include dots();
+  }
+  &:after {
+    content: "";
+    @include pos(absolute, $bottom: 0, $left: 0);
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, $color-transparent 0%, $color-sky 50%, $color-transparent 100%);
+  }
+}
+.course-info {
+  thead {
+    border: none;
+  }
+  th {
+    text-align: left;
+  }
+  td {
+
+  }
+}
+.actions {
+  text-align:center;
+  input,
+  a {
+    color: $color-dark-sky;
+    @include dots();
+  }
+  input[name="update_cart"] {
+    display: block;
+    width: auto;
+    margin: 0 auto 10px;
+    padding-left: 30px;
+    background: url('#{$path-svg}/icon-reload.svg') no-repeat 5px center / 14px 14px;
+  }
+  p.form-row.form-row-wide {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
+    padding-left: 50px;
+  }
+}
+.coupon {
+  overflow: hidden;
+  .form-row {
+    overflow: hidden;
+    transform: translateY(-100px);
+    opacity: 0;
+    border-bottom: 1px solid $color-light-gray;
+    visibility: hidden;
+    transition-property: transform, opacity;
+    transition: .3s ease;
+  }
+  input[name="show_coupon"]:checked {
+    & ~ .form-row {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+  input[name="coupon_code"] {
+    width: 80%;
+    float: left;
+  }
+  input[name="apply_coupon"] {
+    width: 20%;
+    float: right;
+    text-align: right;
+    color: $color-blue;
+  }
+}
+td.addition {
+  margin-bottom: 0;
+  padding: 10px 15px;
+  background-color: $color-white-snow;
+  text-align: center;
+  color: $color-dark-sky;
+  p {
+    margin-bottom: 10px;
+  }
+  a {
+    display: block;
+    font: 18px/28px 'oswaldmedium', sans-serif;
+    color: $color-black;
+    letter-spacing: 4px;
+  }
+}
+.wc-proceed-to-checkout {
+  padding-top: 20px;
+  text-align: center;
+}
+td.discount,
+td.order-total,
+td.cart-subtotal {
+  &:before {
+    color: $color-black;
+    text-transform: capitalize;
+  }
+}
+.order-total {
+  font-family: 'inconsolatabold', sans-serif !important;
+}
+.product-remove {
+  text-align: center;
+  padding: 5px 0;
+  a {
+    position: relative;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: $color-white-snow;
+    border: 1px solid $color-light-sky;
+    text-indent: -9999px;
+    &:before,
+    &:after {
+      content: "";
+      @include pos(absolute, calc(50% - 8px), calc(50% - 1px));
+      width: 2px;
+      height: 16px;
+      background-color: $color-dark-sky;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+@include tab {
+  .actions {
+    @include flex(row, space-between, flex-start);
+    text-align: right;
+    a {
+      margin: 0;
+    }
+    input[name="update_cart"] {
+      padding: 0 0 0 30px;
+      margin: 0;
+    }
+    p.form-row.form-row-wide {
+      display: inline-block;
+      width: auto;
+    }
+  }
+  .coupon {
+    width: 280px;
+    text-align: left;
+  }
+  td.addition {
+    padding: 30px 20px;
+  }
+}
+@include lap {
+  thead,
+  .cart_item {
+    border-bottom: 1px solid $color-light-gray;
+  }
+  thead {
+    display: table-header-group;
+  }
+  .cart_item {
+    > td {
+      padding: 50px 0;
+    }
+    h3 {
+      margin-bottom: 20px;
+    }
+  }
+  .course-info {
+    th {
+      padding: 0;
+      width: 25%;
+    }
+    td {
+      width: 25%;
+      padding: 5px;
+    }
+  }
+  th {
+    padding-bottom: 18px;
+  }
+  td {
+    display: table-cell;
+    text-align: left;
+    &[data-title] {
+      padding-left: 0;
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .product-name {
+    width: 75%;
+  }
+  td.product-quantity {
+    vertical-align: bottom;
+  }
+  .product-quantity {
+    text-align: center;
+    strong {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+  }
+  td.product-price {
+    font-size: 18px;
+    line-height: 46px;
+    vertical-align: bottom;
+  }
+  .product-price {
+    text-align: right;
+  }
+  .product-remove {
+    padding-left: 40px;
+    text-align: right;
+    vertical-align: middle;
+    @include inlined();
+    a {
+      margin-top: 65px;
+      background-color: $color-transparent;
+      border: none;
+    }
+  }
+  .actions {
+    display: table-cell;
+    padding-top: 25px;
+    overflow: hidden;
+    text-align: center;
+    a {
+      float: left;
+    }
+    input[name="update_cart"] {
+      display: inline-block;
+    }
+  }
+  .coupon {
+    float: right;
+    margin-right: 80px;
+  }
+  td.addition {
+    @include flex(row, space-between, center);
+    width: 600px;
+    float: left;
+    margin-right: 120px;
+    padding: 40px 60px;
+    text-align: left;
+    a {
+      min-width: 35%;
+      text-align: center;
+    }
+  }
+  .cart_totals {
+    overflow: hidden;
+  }
+  .wc-proceed-to-checkout {
+    width: 280px;
+    margin: -53px 80px 0 0;
+    padding: 0;
+    float: right;
+    a {
+      width: 100%;
+    }
+  }
+  td.discount,
+  td.order-total,
+  td.cart-subtotal {
+    display: block;
+    width: 280px;
+    padding: 5px 0;
+    overflow: hidden;
+    text-align: right;
+    &:before {
+      display: block;
+    }
+  }
+}
+@include desk {
+  td.addition {
+    width: 800px;
+    margin-right: 200px;
+  }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="no-dev">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"
+				content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<link rel="shortcut icon" href="dist/images/apple-icon.png"
+				type="image/x-icon">
+	<link rel="icon" href="dist/images/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="dist/images/apple-icon.png"/>
+	<meta content="telephone=no" name="format-detection">
+	<title>Login Register</title>
+	<link rel="stylesheet" href="dist/css/login-register.css"/>
+</head>
+<body>
+
+<main class="wrapper">
+
+	//= templates/header
+	//= templates/search-panel
+
+	<div class="page-wrap">
+		<div class="section">
+			<div class="container small">
+
+				//= templates/bread-crumbs
+
+				<div class="title">
+					<h2>Pricing & Schedules</h2>
+				</div>
+				<!--<div class="tab-nav">-->
+					<!--<ul>-->
+						<!--<li class="active"><a href="#login-wrap">Returning Customers</a></li>-->
+						<!--<li><a href="#register-wrap">create account</a></li>-->
+					<!--</ul>-->
+				<!--</div>-->
+
+				<!--<div class="tab-content active" id="login-wrap">-->
+					<!--<form action="#" method="post" id="login-form">-->
+						<!--<div class="form-wrap">-->
+							<!--<p class="form-row form-row-wide woocommerce-invalid">-->
+								<!--<input type="email" id="login-email" class="form-control" placeholder="Email*" required>-->
+								<!--<label for="login-email">Email*</label>-->
+							<!--</p>-->
+							<!--<p class="form-row form-row-wide woocommerce-invalid">-->
+								<!--<input type="text" id="login-password" class="form-control" placeholder="Password*" required>-->
+								<!--<label for="login-password">Password*</label>-->
+								<!--<a class="forgot-pass" href="#forgot-password">Forgot your password?</a>-->
+							<!--</p>-->
+							<!--<p class="form-row form-row-wide">-->
+								<!--<input type="submit" class="btn btn-blue" value="sign in">-->
+							<!--</p>-->
+							<!--<div class="status">Wrong username or password.</div>-->
+						<!--</div>-->
+					<!--</form>-->
+				<!--</div>-->
+
+				<!--<div class="tab-content" id="forgot-password">-->
+					<!--<form action="/" method="post">-->
+						<!--<div class="form-wrap">-->
+							<!--<div class="message">-->
+								<!--<h3>Forgot your password?</h3>-->
+								<!--<p>Please enter your username or email address.</p>-->
+								<!--<p>You will receive a link to create a new password via email.</p>-->
+							<!--</div>-->
+							<!--<p class="form-row form-row-wide woocommerce-invalid">-->
+								<!--<input class="form-control" type="text" id="forgot-pass" placeholder="Username or email address">-->
+								<!--<label for="forgot-pass">Username or email address</label>-->
+							<!--</p>-->
+							<!--<p class="form-row form-row-wide">-->
+								<!--<button type="submit" class="btn btn-blue">RESET PASSWORD</button>-->
+							<!--</p>-->
+							<!--<div class="status">Wrong username or password.</div>-->
+						<!--</div>-->
+					<!--</form>-->
+				<!--</div>-->
+
+				<div id="register-wrap">
+					<!--<header>-->
+						<!--<h3>Why should you register an account?</h3>-->
+						<!--<p>Fast & easy check out</p>-->
+						<!--<p>Easy access to your order history & status</p>-->
+					<!--</header>-->
+
+					<form action="#" method="post" id="register-form">
+						<div class="form-wrap">
+							<p class="form-row form-row-wide">
+								<input type="text" id="name" class="form-control" placeholder="first name*" required>
+								<label for="name">first name*</label>
+							</p>
+							<!--<p class="form-row form-row-last">-->
+								<!--<input type="text" id="last-name" class="form-control" placeholder="Last Name*" required>-->
+								<!--<label for="last-name">Last Name*</label>-->
+							<!--</p>-->
+
+							<p class="form-row form-row-wide">
+								<input type="email" id="email-address" class="form-control" placeholder="Email Address*" required>
+								<label for="email-address">Email Address*</label>
+							</p>
+							<p class="form-row form-row-wide">
+								<input type="text" id="phone-number" class="form-control" placeholder="Phone Number">
+								<label for="phone-number">Phone Number</label>
+							</p>
+
+							<!--<p class="form-row form-row-first">-->
+								<!--<input type="text" id="password" class="form-control" placeholder="password*" required>-->
+								<!--<label for="password">password*</label>-->
+							<!--</p>-->
+							<!--<p class="form-row form-row-last">-->
+								<!--<input type="text" id="password-again" class="form-control" placeholder="password again*" required>-->
+								<!--<label for="password-again">password again*</label>-->
+							<!--</p>-->
+							<p class="form-row form-row-wide">
+								<input type="submit" class="btn btn-blue" value="View Pricing">
+							</p>
+							<!--<div class="status" style="display: block;text-align: left;"><ul class="list-errors"><li>Your password must contain at least 8 characters.</li></ul></div>-->
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div><!--PAGE END-->
+
+	//= templates/footer
+
+</main><!-- WRAPPER END -->
+<div class="popups"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="dist/js/global.js"></script>
+<script src="dist/js/login-register.js"></script>
+</body>
+</html>

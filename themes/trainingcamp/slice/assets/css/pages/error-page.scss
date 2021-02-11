@@ -1,0 +1,175 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+
+
+.section {
+  display: table;
+  text-align: center;
+  width: 100%;
+
+  &.section-right {
+    display: table;
+    @include bg(50%, 50%, cover);
+    color: $color-white;
+    min-height: 75vh;
+    .container {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  &.section-left {
+    position: relative;
+    min-height: 25vh;
+    &:before {
+      content: 'OOPS';
+      @include pos(absolute, 50%, 0);
+      width: 100%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      color: rgba($color-dark-gray, 0.08);
+      font: 75px/75px 'oswaldmedium', sans-serif;
+      margin-top: 5px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+  }
+
+  h1 {
+    font: 100px/100px 'oswaldmedium', sans-serif;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    @include pos(absolute, center, 0);
+    width: 100%;
+    font: 22px/32px 'oswaldmedium', sans-serif;
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+
+  h3 {
+    font: 12px/20px 'oswaldmedium', sans-serif;
+    margin-bottom: 0;
+    + h3 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+@include mob-landscape {
+  .page-wrap {
+    overflow: hidden;
+  }
+  .section {
+    &.section-right {
+      height: 100vh;
+      float: right;
+      width: 60%;
+    }
+    &.section-left {
+      height: 100vh;
+      float: left;
+      width: 40%;
+      &:before {
+        font-size: 100px;
+        line-height: 100px;
+      }
+    }
+    h2 {
+      span {
+        display: block;
+        width: 40%;
+        margin: 0 auto;
+        text-align: left;
+      }
+    }
+  }
+}
+
+@include tab {
+  .section {
+    h1 {
+      font-size: 140px;
+      line-height: 140px;
+    }
+
+    h2 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+
+    h3 {
+      font-size: 16px;
+      line-height: 24px;
+      + h3 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+@include xtab {
+  .section {
+    &.section-left {
+      &:before {
+        font-size: 135px;
+        line-height: 135px;
+      }
+    }
+  }
+}
+@include lap {
+  .section {
+    &.section-right {
+      padding: 90px 0 70px;
+    }
+    h1 {
+      letter-spacing: 28px;
+    }
+    h2 {
+      font-size: 48px;
+      line-height: 58px;
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+}
+
+@include desk {
+  .section {
+    &.section-right {
+      padding-top: 100px;
+    }
+    &.section-left {
+      &:before {
+        font-size: 172px;
+        line-height: 172px;
+        letter-spacing: 35px;
+      }
+    }
+    h2 {
+      font-size: 64px;
+      line-height: 75px;
+      letter-spacing: 11px;
+      padding-right: 155px;
+    }
+  }
+}
+
+.no-dev {
+  @include lap {
+    .section {
+      &.section-right {
+        width: 64%;
+      }
+      &.section-left {
+        width: 36%;
+      }
+    }
+  }
+}

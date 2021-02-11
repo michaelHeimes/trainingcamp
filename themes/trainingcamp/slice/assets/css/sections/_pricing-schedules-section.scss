@@ -1,0 +1,228 @@
+.pricing-schedules {
+  overflow: hidden;
+  table {
+    table-layout: fixed;
+  }
+  .content-table {
+    > table {
+      margin-bottom: 50px
+    }
+  }
+  .filters-list {
+    margin-bottom: 20px;
+    li {
+      position: relative;
+      display: inline-block;
+      margin: 0 10px 10px 0;
+      padding: 12px 40px 10px 10px;
+      font: 12px/18px 'oswaldregular', sans-serif;
+      color: $color-blue;
+      background-color: $color-white-snow;
+      text-transform: uppercase;
+    }
+  }
+  .remove-filter {
+    @include pos(absolute, 0, $right: 0);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    &:before,
+    &:after {
+      content: "";
+      @include pos(absolute, 50%, calc(50% - 3px));
+      width: 12px;
+      height: 1px;
+      background-color: $color-blue;
+      transform-origin: center;
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(135deg);
+    }
+  }
+  .show-details-btn {
+    position: relative;
+    display: inline-block;
+    padding: 0 24px 0 0;
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+  table {
+    width: 100%;
+    table-layout: fixed;
+    text-align: center;
+  }
+  thead {
+    background-color: $color-white-snow;
+    color: $color-dark-sky;
+    display: none;
+  }
+  th {
+    text-transform: uppercase;
+    font: 14px/26px 'oswaldmedium', sans-serif !important;
+  }
+  td {
+    position: relative;
+    display: block;
+    padding: 10px 0;
+    text-align: right;
+    &[data-title] {
+      padding-left: 40%;
+      &:before {
+        content: attr(data-title);
+        @include pos(absolute, center, 0);
+        width: 40%;
+        color: $color-dark-sky;
+        text-transform: uppercase;
+        text-align: left;
+        @include dots();
+      }
+      &:after {
+        content: "";
+        @include pos(absolute, $bottom: 0, $left: 0);
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, $color-transparent 0%, $color-sky 50%, $color-transparent 100%);
+      }
+    }
+  }
+  td.qty:after {
+    bottom: 100%;
+  }
+  td.total-val {
+    &:before {
+      font-family: 'inconsolatabold', sans-serif;
+      color: $color-black;
+      text-transform: capitalize;
+    }
+    &:after {
+      display: none;
+    }
+  }
+  .availability + td {
+    text-align: right;
+  }
+  td.not-available {
+    color: $color-light-sky;
+  }
+  .total-heading {
+    display: none;
+  }
+  .course-details {
+    display: none;
+    background-color: $color-white;
+    thead {
+      background: none;
+    }
+    .description {
+      text-align: left;
+    }
+    .price {
+      text-align: right;
+    }
+    .total-heading,
+    .total-val {
+      font: 18px/26px 'inconsolatabold', sans-serif;
+    }
+    .buttons {
+      text-align: right;
+    }
+  }
+}
+
+@include lap {
+  .pricing-schedules {
+    aside {
+      float: left;
+      margin-right: 40px;
+    }
+    .content-table {
+
+      overflow: hidden;
+    }
+    thead {
+      display: table-header-group;
+    }
+    th {
+      padding: 17px 10px;
+      letter-spacing: 3px;
+      width: 20%;
+      &.availability {
+        width: 40%;
+      }
+    }
+    td {
+      display: table-cell;
+      width: 20%;
+      height: 72px;
+      text-align: center;
+      &[data-title] {
+        padding-left: 10px;
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+    }
+    td.description,
+    th.description {
+      width: 80%;
+    }
+    .availability {
+      text-align: left;
+      + td {
+        button:after {
+          top: -1px;
+        }
+      }
+    }
+    .course-item {
+      border-bottom: 1px solid $color-light-gray;
+    }
+    td.total-heading,
+    td.total-val {
+      padding: 10px 0 20px;
+    }
+    .total-heading {
+      display: table-cell;
+    }
+    .course-details {
+      th,
+      td {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      td {
+        height: auto;
+        padding: 5px 0;
+        vertical-align: top;
+      }
+      td.buttons {
+        padding: 15px 0 20px;
+        width: 100%;
+      }
+    }
+    .filters-list {
+      li {
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+@include desk {
+  .pricing-schedules {
+    aside {
+      margin-right: 100px;
+    }
+    .filters-list {
+      margin-bottom: 48px;
+    }
+    h3 {
+      margin-bottom: 21px;
+      line-height: 20px;
+    }
+  }
+}

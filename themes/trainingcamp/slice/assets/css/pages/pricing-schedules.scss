@@ -1,0 +1,100 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+@import "../sections/bread-crumbs";
+@import "../sections/pricing-schedules-section";
+@import "../sections/jquery-ui";
+@import "../sections/app";
+@import "../sections/jcf";
+@import "../sections/aside-filter";
+@import "../sections/pagination";
+.page-wrap {
+  padding-top: 50px;
+}
+.tab-nav {
+  max-width: 480px;
+  .form-row {
+    border: none;
+    margin-bottom: 10px;
+    &.not-allowed {
+      position: relative;
+      opacity: .6;
+      &:after {
+        content: "";
+        @include pos(absolute, 0, 0, 0, 0);
+        cursor: not-allowed;
+        z-index: 10;
+      }
+    }
+  }
+}
+.dropdown {
+  .dropdown-title {
+    font-size: 14px;
+    text-align: left;
+  }
+  ul {
+    text-align: left;
+  }
+}
+.img-block {
+  margin-bottom: 40px;
+  max-height: 460px;
+}
+@include tab {
+  .tab-nav {
+    width: 480px;
+    form {
+      @include flex(row, $fw: wrap);
+    }
+    .form-row {
+      width: 100% !important;
+      margin-bottom: 10px;
+      border: none;
+    }
+    button {
+      font-size: 10px;
+    }
+  }
+  .dropdown {
+    .dropdown-title {
+      font-size: 10px;
+      line-height: 50px;
+    }
+  }
+}
+@include lap {
+  .page-wrap {
+    padding-top: 180px;
+  }
+  .dropdown li {
+    width: 100%;
+  }
+  .img-block {
+    margin-bottom: 75px;
+  }
+  .tab-nav {
+    button {
+      padding: 20px;
+      font-size: 14px;
+    }
+  }
+  .tab-content {
+    h2 {
+      margin-bottom: 15px;
+      letter-spacing: 6px;
+    }
+  }
+}
+@include desk {
+  .page-wrap {
+    padding-top: 270px;
+  }
+  .tab-nav {
+    margin-bottom: 130px;
+    .form-row {
+      height: 68px;
+    }
+  }
+}

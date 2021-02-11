@@ -1,0 +1,215 @@
+@import "../global";
+@import "../libs/variables";
+@import "../libs/mixins";
+//sections
+@import "../sections/bread-crumbs";
+@import "../sections/shop-table";
+
+.page-wrap {
+  padding-top: 50px;
+}
+div.title {
+  padding-top: 0;
+  &:before {
+    display: none;
+  }
+}
+
+.forms {
+  border-bottom: 1px solid $color-light-gray;
+}
+
+.checkout-method {
+  .part {
+    max-width: 380px;
+    margin: 0 auto 40px;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+#forgot-pass-form {
+  display: none;
+  .form-wrap {
+    margin-bottom: 0;
+  }
+}
+
+.forgot-pass,
+.back-to-login{
+  margin-bottom: 25px;
+  font: 12px/28px 'oswaldlight', sans-serif;
+}
+
+h3 {
+  font-family: 'oswaldbold', sans-serif;
+}
+
+.payment_methods {
+  margin-bottom: 40px;
+}
+.congrats {
+  text-align: center;
+  overflow: visible;
+  div.title {
+    margin-bottom: 20px;
+    padding-top: 0;
+    &:before {
+      display: none;
+    }
+  }
+  p {
+    margin-bottom: 5px;
+  }
+  .buttons {
+    padding-top: 20px;
+  }
+  a.atcb-link {
+    color: #fff !important;
+    background-color: #0084ff !important;
+    box-shadow: 0 2px 10px rgba(0, 113, 219, .4) !important;
+    border-radius: 0 !important;
+    font: 10px/14px oswaldmedium, sans-serif !important;
+    position: relative !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 288px !important;
+    background-image: url('#{$path-svg}/calendar-light.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: 20px center !important;
+    background-size: 14px auto !important;
+    text-align: left !important;
+    padding: 14px 20px 12px 50px !important;
+    vertical-align: top !important;
+    text-decoration: none !important;
+    transition: .3s ease !important;
+    transition-property: background, color, box-shadow !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+  }
+  .atcb-list {
+    width: 100% !important;
+  }
+}
+
+@include tab {
+  .checkout-method {
+    position: relative;
+    padding: 40px 0;
+    &:before {
+      content: "";
+      @include pos(absolute, 0, 50%);
+      width: 1px;
+      height: 100%;
+      background-color: $color-light-gray;
+    }
+    .wrap {
+      @include flex(row, space-between);
+    }
+    .part {
+      @include flex(column, space-between);
+      width: 100%;
+      padding: 0 40px;
+    }
+  }
+  .payment_methods {
+    max-width: 480px;
+    margin: 0 auto 80px;
+    margin-bottom: 40px;
+    .form-row {
+      &.form-row-first,
+      &.form-row-last {
+        width: 100%;
+      }
+      &.form-row-first {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@include lap {
+  .page-wrap {
+    padding-top: 180px;
+  }
+  .checkout-method {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+  #forgot-pass-form {
+    .form-row {
+      margin-bottom: 20px;
+    }
+  }
+  .message {
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .congrats {
+    div.title {
+      margin-bottom: 42px;
+    }
+    h3 {
+      margin-bottom: 8px;
+    }
+    a.atcb-link {
+      font-size: 14px !important;
+      line-height: 26px !important;
+      padding: 14px 50px 12px 88px !important;
+      background-position: 60px center !important;
+    }
+    .atcb-list {
+      a {
+        font: 14px/26px oswaldmedium, sans-serif !important;
+      }
+    }
+  }
+}
+
+@include desk {
+  .page-wrap {
+    padding-top: 270px;
+  }
+  div.title {
+    padding-top: 15px;
+  }
+  .buttons {
+    padding-top: 28px;
+  }
+  h3 + p {
+    margin-bottom: 20px;
+  }
+}
+.no-dev {
+  .congrats {
+    a.atcb-link:hover {
+      @extend .atcb-link;
+      box-shadow: 0 2px 10px rgba(0, 113, 219, 1) !important;
+    }
+    .atcb-list {
+      a:hover {
+        background-color: $color-blue !important;
+      }
+    }
+  }
+}
+.no-dev {
+  .forgot-pass,
+  .back-to-login {
+    transition: color .3s ease;
+    &:hover {
+      color: $color-dark-gray;
+      span:after {
+        border-color: $color-dark-gray;
+      }
+      span:before {
+        background-color: $color-dark-gray;
+      }
+    }
+  }
+}
