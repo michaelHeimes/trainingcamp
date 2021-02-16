@@ -13,7 +13,7 @@
 				</div>
 			<?php endif; ?>
 
-			<footer class="footer_">
+			<footer class="footer_ <?php if( is_page_template('templates/landing-page.php') ):?>landing-page<?php endif;?>">
 
 				<?php if(get_field('action_url','options')): ?>
 					<div class="container">
