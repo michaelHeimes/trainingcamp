@@ -357,7 +357,7 @@ get_header(); ?>
 					    	
 					    	<div class="inner">
 				    
-								<h3><span><?php the_sub_field('question');?></span><span class="ui-accordion-header-icon"></span></h3>
+								<h3><span class="q-text"><?php the_sub_field('question');?></span><span class="ui-accordion-header-icon"></span></h3>
 								
 								<div class="answer">
 									<?php the_sub_field('answer');?>
@@ -517,10 +517,7 @@ endwhile;?>
 			if( $images ): ?>
 		        <?php foreach( $images as $image ): ?>
 		            <div class="logo-wrap">
-		                <a href="<?php echo esc_url($image['url']); ?>">
-		                     <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-		                </a>
-		                <p><?php echo esc_html($image['caption']); ?></p>
+		                <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
 		            </div>
 		        <?php endforeach; ?>
 			<?php endif; ?>
