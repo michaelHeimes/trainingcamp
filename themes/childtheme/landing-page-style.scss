@@ -175,11 +175,11 @@ $landing-purple: #3C509F;
 	}
 	
 	.s1 {
-		padding-top: 7.5em;
+		padding-top: 0;
 		padding-bottom: 7.55em;
 		
-		@media screen and (min-width: 768px) {
-			padding-top: 0;
+		@media screen and (min-width: 480px) {
+			padding-top: 7.5em;
 		}
 		
 		@media screen and (min-width: 1280px) {
@@ -602,6 +602,12 @@ $landing-purple: #3C509F;
 	.s2 {
 		position: relative;
 		
+		>.container {
+			@media screen and (max-width: 1279px) {
+				max-width: none;
+			}
+		}
+		
 		.cards-wrap {
 			display: flex;
 			flex-wrap: wrap;
@@ -637,12 +643,20 @@ $landing-purple: #3C509F;
 				
 			}
 				
-				@media screen and (min-width: 992px) {
+				@media screen and (min-width: 1200px) {
 					flex: 0 1 33.33333%;
 				}
 								
 				.inner {
 					max-width: 376px;
+					
+					@media screen and (min-width: 768px) {
+						max-width: 768px;
+					}
+					
+					@media screen and (min-width: 1200px) {
+						max-width: 376px;
+					}
 					
 					.top {
 						position: relative;
@@ -652,14 +666,23 @@ $landing-purple: #3C509F;
 						
 						.mask {
 							position: absolute;
+						    opacity: 1;
 						    top: 0%;
-						    left: 0;
+						    left: 50%;
 						    right: 0;
 						    bottom: 0;
-							height: calc(160% + 15px);
-						    width: 150%;
-						    opacity: 1;
-						    transform: rotate(33deg) translate(20%,-12%);
+							height: 100%;
+						    width: 200%;
+						    transform: skew(-35deg) translate(0,0);
+							    						    
+						    @media screen and (min-width: 768px) {						    
+							    transform: skew(-64deg) translate(0, 0);
+						    }
+						    
+						    @media screen and (min-width: 1200px) {
+							    transform: skew(-35deg) translate(0,0);
+						    }
+						    
 						}
 						
 						.inside-border {
@@ -668,7 +691,6 @@ $landing-purple: #3C509F;
 							position: relative;
 							
 							.mask {
-								height: 160%;
 								opacity: 1;
 							}
 							
